@@ -6,7 +6,7 @@ url: "https://kokomai.github.io"
 title: 코딩 범고래의 해저동굴                                    # site's title
 description: ""      # used by search engines
 avatar: assets/img/coding_orca.png                       # Empty for no avatar in navbar
-favicon: assets/pixel_orca_cutted.png                           # Icon displayed in the tab
+favicon: assets/img/pixel_orca_cutted.png                           # Icon displayed in the tab
 
 # Header and footer text
 header_text:   # Change Blog header text
