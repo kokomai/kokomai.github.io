@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var main = document.getElementById("main");
     var mainStyle = main.style;
 
-    mainStyle.backgroundPosition = '100% ' + parseInt(-x / 3) + 'px' + ', 0%, center top';
+    mainStyle.backgroundPosition = '10% ' + (50+ parseInt(-x / 30)) + '%';
   });
 });
