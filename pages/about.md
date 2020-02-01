@@ -1,14 +1,26 @@
 ---
 layout: page
-title: About
+title: 코딩범고래는 누구인가?
 permalink: /about/
-feature-img: "assets/img/pexels/circuit.jpeg"
+feature-img: "assets/img/pexels/sturned Orca.gif"
 tags: [About, Archive]
 ---
 
-Type on Strap is based on Type Theme, a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+# Skills
 
-Head over to the [theme's documentation](https://github.io/sylhare/Type-on-Strap) for much more information about Type on Strap or to install this theme on your own Jekyll site.
+![Java](assets/img/skills/Java사진.jpg)
+![Oracle](assets/img/skills/Oracle.png)
+![myBatis](assets/img/skills/mybatis.png)
+![javaScript](assets/img/skills/javascript.png)
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+----------------------------------
+
+# 연혁
+2013.03 ~ 2019.02 가톨릭대학교 :: 사회학/심리학 전공
+2019.07 ~ 2020.01 쌍용 강북 교육센터 :: Java를 활용한 웹 응용 SW 개발자 양성과정 
+
+
+----------------------------------
+
+
  
