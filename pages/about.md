@@ -8,10 +8,10 @@ tags: [About, 범고래]
 
 # Skills
 
-![Java]("./assets/img/skills/Java사진.jpg")
-![Oracle]("./assets/img/skills/Oracle.png")
-![myBatis]("./assets/img/skills/mybatis.png")
-![javaScript]("./assets/img/skills/javascript.png")
+![Java](./assets/img/skills/Java사진.jpg)
+![Oracle](./assets/img/skills/Oracle.png)
+![myBatis](./assets/img/skills/mybatis.png)
+![javaScript](./assets/img/skills/javascript.png)
 
 ----------------------------------
 
