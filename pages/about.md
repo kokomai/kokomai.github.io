@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 코딩범고래는 누구인가?
-permalink: /about/
+permalink:
 feature-img: "assets/img/pexels/sturned Orca.gif"
 tags: [About, 범고래]
 ---
