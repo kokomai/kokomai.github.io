@@ -3,15 +3,15 @@ layout: page
 title: 코딩범고래는 누구인가?
 permalink: /about/
 feature-img: "assets/img/pexels/sturned Orca.gif"
-tags: [범고래, 누구?, About]
+tags: [About]
 ---
 
 # Skills
 
-![Java](https://kokomai.github.io/about/assets/img/skills/Java사진.jpg)
-![Oracle](https://kokomai.github.io/about/assets/img/skills/Oracle.png)
-![myBatis](https://kokomai.github.io/about/assets/img/skills/mybatis.png)
-![javaScript](https://kokomai.github.io/about/assets/img/skills/javascript.png)
+![Java]("assets/img/skills/Java사진.jpg")
+![Oracle]("assets/img/skills/Oracle.png")
+![myBatis]("assets/img/skills/mybatis.png")
+![javaScript]("assets/img/skills/javascript.png")
 
 ----------------------------------
 
