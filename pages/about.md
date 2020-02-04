@@ -8,10 +8,11 @@ tags: [About, 범고래]
 
 # Skills
 
-![Java](https://raw.githubusercontent.com/kokomai/kokomai.github.io/master/assets/img/skills/Java%EC%82%AC%EC%A7%84.jpg){: width:50% height:50%}
-![Oracle](https://raw.githubusercontent.com/kokomai/kokomai.github.io/master/assets/img/skills/Oracle.png){: width:40% height:40%}
-![myBatis](https://raw.githubusercontent.com/kokomai/kokomai.github.io/master/assets/img/skills/mybatis.png){: width:30% height:30%}
-![javaScript](https://raw.githubusercontent.com/kokomai/kokomai.github.io/master/assets/img/skills/javascript.png){: width:30% height:30%}
+![Java](https://raw.githubusercontent.com/kokomai/kokomai.github.io/master/assets/img/skills/Java%EC%82%AC%EC%A7%84.jpg){: width="50%" height="50%"}
+![Oracle](https://raw.githubusercontent.com/kokomai/kokomai.github.io/master/assets/img/skills/Oracle.png){: width="40%" height="40%"}
+![myBatis](https://raw.githubusercontent.com/kokomai/kokomai.github.io/master/assets/img/skills/mybatis.png){: width="30%" height="30%"}
+
+![javaScript](https://raw.githubusercontent.com/kokomai/kokomai.github.io/master/assets/img/skills/javascript.png){: width="30%" height="30%"}
 
 ----------------------------------
 
