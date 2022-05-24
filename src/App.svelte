@@ -2,4 +2,8 @@
 	let name = 'coding-orca';
 </script>
 
-<h1>Welcome to {name}'s world!</h1>
+
+<div>
+	<img src="/images/swimmingOrca1.gif" alt="banner"/>
+	<h1>Welcome to {name}'s world!</h1>
+</div>
