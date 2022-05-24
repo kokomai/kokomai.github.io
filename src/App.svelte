@@ -1,9 +1,9 @@
 <script>
-	let name = 'coding-orca';
-</script>
+	import Router from 'svelte-spa-router'
+  	import routes from './routes'
+  	import Header from './components/Header.svelte'
+  </script>
+  
 
-
-<div>
-	<img src="/images/swimmingOrca1.gif" alt="banner"/>
-	<h1>Welcome to {name}'s world!</h1>
-</div>
+  <Header />
+  <Router {routes} />
