@@ -1,2 +1,3079 @@
-this.kokomai=this.kokomai||{},this.kokomai.github=this.kokomai.github||{},this.kokomai.github.io=function(){"use strict";function t(){}function n(t,n){for(const o in n)t[o]=n[o];return t}function o(t){return t()}function e(){return Object.create(null)}function c(t){t.forEach(o)}function s(t){return"function"==typeof t}function i(t,n){return t!=t?n==n:t!==n||t&&"object"==typeof t||"function"==typeof t}function l(n){return n&&s(n.destroy)?n.destroy:t}function r(t,n){t.appendChild(n)}function u(t,n,o){t.insertBefore(n,o||null)}function a(t){t.parentNode.removeChild(t)}function d(t){return document.createElement(t)}function m(t){return document.createTextNode(t)}function v(){return m(" ")}function f(){return m("")}function h(t,n,o){null==o?t.removeAttribute(n):t.getAttribute(n)!==o&&t.setAttribute(n,o)}function p(t,n,o){t.classList[o?"add":"remove"](n)}let $;function g(t){$=t}function b(){if(!$)throw new Error("Function called outside component initialization");return $}function w(){const t=b();return(n,o,{cancelable:e=!1}={})=>{const c=t.$$.callbacks[n];if(c){const s=function(t,n,{bubbles:o=!1,cancelable:e=!1}={}){const c=document.createEvent("CustomEvent");return c.initCustomEvent(t,o,e,n),c}(n,o,{cancelable:e});return c.slice().forEach((n=>{n.call(t,s)})),!s.defaultPrevented}return!0}}function y(t,n){const o=t.$$.callbacks[n.type];o&&o.slice().forEach((t=>t.call(this,n)))}const x=[],_=[],T=[],F=[],k=Promise.resolve();let C=!1;function L(){C||(C=!0,k.then(H))}function E(t){T.push(t)}const S=new Set;let M=0;function H(){const t=$;do{for(;M<x.length;){const t=x[M];M++,g(t),W(t.$$)}for(g(null),x.length=0,M=0;_.length;)_.pop()();for(let t=0;t<T.length;t+=1){const n=T[t];S.has(n)||(S.add(n),n())}T.length=0}while(x.length);for(;F.length;)F.pop()();C=!1,S.clear(),g(t)}function W(t){if(null!==t.fragment){t.update(),c(t.before_update);const n=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,n),t.after_update.forEach(E)}}const j=new Set;let O;function A(){O={r:0,c:[],p:O}}function N(){O.r||c(O.c),O=O.p}function R(t,n){t&&t.i&&(j.delete(t),t.i(n))}function q(t,n,o,e){if(t&&t.o){if(j.has(t))return;j.add(t),O.c.push((()=>{j.delete(t),e&&(o&&t.d(1),e())})),t.o(n)}}function D(t,n){const o={},e={},c={$$scope:1};let s=t.length;for(;s--;){const i=t[s],l=n[s];if(l){for(const t in i)t in l||(e[t]=1);for(const t in l)c[t]||(o[t]=l[t],c[t]=1);t[s]=l}else for(const t in i)c[t]=1}for(const t in e)t in o||(o[t]=void 0);return o}function I(t){return"object"==typeof t&&null!==t?t:{}}function P(t){t&&t.c()}function Y(t,n,e,i){const{fragment:l,on_mount:r,on_destroy:u,after_update:a}=t.$$;l&&l.m(n,e),i||E((()=>{const n=r.map(o).filter(s);u?u.push(...n):c(n),t.$$.on_mount=[]})),a.forEach(E)}function z(t,n){const o=t.$$;null!==o.fragment&&(c(o.on_destroy),o.fragment&&o.fragment.d(n),o.on_destroy=o.fragment=null,o.ctx=[])}function X(n,o,s,i,l,r,u,d=[-1]){const m=$;g(n);const v=n.$$={fragment:null,ctx:null,props:r,update:t,not_equal:l,bound:e(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(o.context||(m?m.$$.context:[])),callbacks:e(),dirty:d,skip_bound:!1,root:o.target||m.$$.root};u&&u(v.root);let f=!1;if(v.ctx=s?s(n,o.props||{},((t,o,...e)=>{const c=e.length?e[0]:o;return v.ctx&&l(v.ctx[t],v.ctx[t]=c)&&(!v.skip_bound&&v.bound[t]&&v.bound[t](c),f&&function(t,n){-1===t.$$.dirty[0]&&(x.push(t),L(),t.$$.dirty.fill(0)),t.$$.dirty[n/31|0]|=1<<n%31}(n,t)),o})):[],v.update(),f=!0,c(v.before_update),v.fragment=!!i&&i(v.ctx),o.target){if(o.hydrate){const t=function(t){return Array.from(t.childNodes)}(o.target);v.fragment&&v.fragment.l(t),t.forEach(a)}else v.fragment&&v.fragment.c();o.intro&&R(n.$$.fragment),Y(n,o.target,o.anchor,o.customElement),H()}g(m)}class B{$destroy(){z(this,1),this.$destroy=t}$on(t,n){const o=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return o.push(n),()=>{const t=o.indexOf(n);-1!==t&&o.splice(t,1)}}$set(t){var n;this.$$set&&(n=t,0!==Object.keys(n).length)&&(this.$$.skip_bound=!0,this.$$set(t),this.$$.skip_bound=!1)}}const U=[];function G(t,n){return{subscribe:J(t,n).subscribe}}function J(n,o=t){let e;const c=new Set;function s(t){if(i(n,t)&&(n=t,e)){const t=!U.length;for(const t of c)t[1](),U.push(t,n);if(t){for(let t=0;t<U.length;t+=2)U[t][0](U[t+1]);U.length=0}}}return{set:s,update:function(t){s(t(n))},subscribe:function(i,l=t){const r=[i,l];return c.add(r),1===c.size&&(e=o(s)||t),i(n),()=>{c.delete(r),0===c.size&&(e(),e=null)}}}}function K(n,o,e){const i=!Array.isArray(n),l=i?[n]:n,r=o.length<2;return G(e,(n=>{let e=!1;const u=[];let a=0,d=t;const m=()=>{if(a)return;d();const e=o(i?u[0]:u,n);r?n(e):d=s(e)?e:t},v=l.map(((n,o)=>function(n,...o){if(null==n)return t;const e=n.subscribe(...o);return e.unsubscribe?()=>e.unsubscribe():e}(n,(t=>{u[o]=t,a&=~(1<<o),e&&m()}),(()=>{a|=1<<o}))));return e=!0,m(),function(){c(v),d()}}))}function Q(t){let o,e,c;const s=[t[2]];var i=t[0];function l(t){let o={};for(let t=0;t<s.length;t+=1)o=n(o,s[t]);return{props:o}}return i&&(o=new i(l()),o.$on("routeEvent",t[7])),{c(){o&&P(o.$$.fragment),e=f()},m(t,n){o&&Y(o,t,n),u(t,e,n),c=!0},p(t,n){const c=4&n?D(s,[I(t[2])]):{};if(i!==(i=t[0])){if(o){A();const t=o;q(t.$$.fragment,1,0,(()=>{z(t,1)})),N()}i?(o=new i(l()),o.$on("routeEvent",t[7]),P(o.$$.fragment),R(o.$$.fragment,1),Y(o,e.parentNode,e)):o=null}else i&&o.$set(c)},i(t){c||(o&&R(o.$$.fragment,t),c=!0)},o(t){o&&q(o.$$.fragment,t),c=!1},d(t){t&&a(e),o&&z(o,t)}}}function V(t){let o,e,c;const s=[{params:t[1]},t[2]];var i=t[0];function l(t){let o={};for(let t=0;t<s.length;t+=1)o=n(o,s[t]);return{props:o}}return i&&(o=new i(l()),o.$on("routeEvent",t[6])),{c(){o&&P(o.$$.fragment),e=f()},m(t,n){o&&Y(o,t,n),u(t,e,n),c=!0},p(t,n){const c=6&n?D(s,[2&n&&{params:t[1]},4&n&&I(t[2])]):{};if(i!==(i=t[0])){if(o){A();const t=o;q(t.$$.fragment,1,0,(()=>{z(t,1)})),N()}i?(o=new i(l()),o.$on("routeEvent",t[6]),P(o.$$.fragment),R(o.$$.fragment,1),Y(o,e.parentNode,e)):o=null}else i&&o.$set(c)},i(t){c||(o&&R(o.$$.fragment,t),c=!0)},o(t){o&&q(o.$$.fragment,t),c=!1},d(t){t&&a(e),o&&z(o,t)}}}function Z(t){let n,o,e,c;const s=[V,Q],i=[];function l(t,n){return t[1]?0:1}return n=l(t),o=i[n]=s[n](t),{c(){o.c(),e=f()},m(t,o){i[n].m(t,o),u(t,e,o),c=!0},p(t,[c]){let r=n;n=l(t),n===r?i[n].p(t,c):(A(),q(i[r],1,1,(()=>{i[r]=null})),N(),o=i[n],o?o.p(t,c):(o=i[n]=s[n](t),o.c()),R(o,1),o.m(e.parentNode,e))},i(t){c||(R(o),c=!0)},o(t){q(o),c=!1},d(t){i[n].d(t),t&&a(e)}}}function tt(){const t=window.location.href.indexOf("#/");let n=t>-1?window.location.href.substr(t+1):"/";const o=n.indexOf("?");let e="";return o>-1&&(e=n.substr(o+1),n=n.substr(0,o)),{location:n,querystring:e}}const nt=G(null,(function(t){t(tt());const n=()=>{t(tt())};return window.addEventListener("hashchange",n,!1),function(){window.removeEventListener("hashchange",n,!1)}}));K(nt,(t=>t.location)),K(nt,(t=>t.querystring));const ot=J(void 0);function et(t,n){if(n=st(n),!t||!t.tagName||"a"!=t.tagName.toLowerCase())throw Error('Action "link" can only be used with <a> tags');return ct(t,n),{update(n){n=st(n),ct(t,n)}}}function ct(t,n){let o=n.href||t.getAttribute("href");if(o&&"/"==o.charAt(0))o="#"+o;else if(!o||o.length<2||"#/"!=o.slice(0,2))throw Error('Invalid value for "href" attribute: '+o);t.setAttribute("href",o),t.addEventListener("click",(t=>{t.preventDefault(),n.disabled||function(t){history.replaceState({...history.state,__svelte_spa_router_scrollX:window.scrollX,__svelte_spa_router_scrollY:window.scrollY},void 0,void 0),window.location.hash=t}(t.currentTarget.getAttribute("href"))}))}function st(t){return t&&"string"==typeof t?{href:t}:t||{}}function it(t,n,o){let{routes:e={}}=n,{prefix:c=""}=n,{restoreScrollState:s=!1}=n;class i{constructor(t,n){if(!n||"function"!=typeof n&&("object"!=typeof n||!0!==n._sveltesparouter))throw Error("Invalid component object");if(!t||"string"==typeof t&&(t.length<1||"/"!=t.charAt(0)&&"*"!=t.charAt(0))||"object"==typeof t&&!(t instanceof RegExp))throw Error('Invalid value for "path" argument - strings must start with / or *');const{pattern:o,keys:e}=function(t,n){if(t instanceof RegExp)return{keys:!1,pattern:t};var o,e,c,s,i=[],l="",r=t.split("/");for(r[0]||r.shift();c=r.shift();)"*"===(o=c[0])?(i.push("wild"),l+="/(.*)"):":"===o?(e=c.indexOf("?",1),s=c.indexOf(".",1),i.push(c.substring(1,~e?e:~s?s:c.length)),l+=~e&&!~s?"(?:/([^/]+?))?":"/([^/]+?)",~s&&(l+=(~e?"?":"")+"\\"+c.substring(s))):l+="/"+c;return{keys:i,pattern:new RegExp("^"+l+(n?"(?=$|/)":"/?$"),"i")}}(t);this.path=t,"object"==typeof n&&!0===n._sveltesparouter?(this.component=n.component,this.conditions=n.conditions||[],this.userData=n.userData,this.props=n.props||{}):(this.component=()=>Promise.resolve(n),this.conditions=[],this.props={}),this._pattern=o,this._keys=e}match(t){if(c)if("string"==typeof c){if(!t.startsWith(c))return null;t=t.substr(c.length)||"/"}else if(c instanceof RegExp){const n=t.match(c);if(!n||!n[0])return null;t=t.substr(n[0].length)||"/"}const n=this._pattern.exec(t);if(null===n)return null;if(!1===this._keys)return n;const o={};let e=0;for(;e<this._keys.length;){try{o[this._keys[e]]=decodeURIComponent(n[e+1]||"")||null}catch(t){o[this._keys[e]]=null}e++}return o}async checkConditions(t){for(let n=0;n<this.conditions.length;n++)if(!await this.conditions[n](t))return!1;return!0}}const l=[];e instanceof Map?e.forEach(((t,n)=>{l.push(new i(n,t))})):Object.keys(e).forEach((t=>{l.push(new i(t,e[t]))}));let r=null,u=null,a={};const d=w();async function m(t,n){await(L(),k),d(t,n)}let v=null,f=null;var h;s&&(f=t=>{v=t.state&&t.state.__svelte_spa_router_scrollY?t.state:null},window.addEventListener("popstate",f),h=()=>{v?window.scrollTo(v.__svelte_spa_router_scrollX,v.__svelte_spa_router_scrollY):window.scrollTo(0,0)},b().$$.after_update.push(h));let p=null,$=null;const g=nt.subscribe((async t=>{p=t;let n=0;for(;n<l.length;){const e=l[n].match(t.location);if(!e){n++;continue}const c={route:l[n].path,location:t.location,querystring:t.querystring,userData:l[n].userData,params:e&&"object"==typeof e&&Object.keys(e).length?e:null};if(!await l[n].checkConditions(c))return o(0,r=null),$=null,void m("conditionsFailed",c);m("routeLoading",Object.assign({},c));const s=l[n].component;if($!=s){s.loading?(o(0,r=s.loading),$=s,o(1,u=s.loadingParams),o(2,a={}),m("routeLoaded",Object.assign({},c,{component:r,name:r.name,params:u}))):(o(0,r=null),$=null);const n=await s();if(t!=p)return;o(0,r=n&&n.default||n),$=s}return e&&"object"==typeof e&&Object.keys(e).length?o(1,u=e):o(1,u=null),o(2,a=l[n].props),void m("routeLoaded",Object.assign({},c,{component:r,name:r.name,params:u})).then((()=>{ot.set(u)}))}o(0,r=null),$=null,ot.set(void 0)}));return function(t){b().$$.on_destroy.push(t)}((()=>{g(),f&&window.removeEventListener("popstate",f)})),t.$$set=t=>{"routes"in t&&o(3,e=t.routes),"prefix"in t&&o(4,c=t.prefix),"restoreScrollState"in t&&o(5,s=t.restoreScrollState)},t.$$.update=()=>{32&t.$$.dirty&&(history.scrollRestoration=s?"manual":"auto")},[r,u,a,e,c,s,function(n){y.call(this,t,n)},function(n){y.call(this,t,n)}]}class lt extends B{constructor(t){super(),X(this,t,it,Z,i,{routes:3,prefix:4,restoreScrollState:5})}}function rt(n){let o,e,c,s,i,l,m,f,p,$,g,b,w,y,x,_,T,F,k,C,L,E,S,M,H,W,j,O,A,N,R,q,D,I,P,Y,z,X,B,U,G,J,K,Q,V,Z,tt,nt,ot,et,ct,st,it,lt,rt,at,dt,mt,vt,ft,ht,pt,$t,gt,bt,wt,yt,xt,_t,Tt,Ft,kt,Ct,Lt,Et,St,Mt,Ht,Wt,jt;return{c(){o=d("div"),e=d("h1"),e.textContent=`Welcome to ${ut}'s world!`,c=v(),s=d("div"),s.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',i=v(),l=d("h1"),l.textContent=`Welcome to ${ut}'s world!`,m=v(),f=d("div"),f.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',p=v(),$=d("h1"),$.textContent=`Welcome to ${ut}'s world!`,g=v(),b=d("div"),b.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',w=v(),y=d("h1"),y.textContent=`Welcome to ${ut}'s world!`,x=v(),_=d("div"),_.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',T=v(),F=d("h1"),F.textContent=`Welcome to ${ut}'s world!`,k=v(),C=d("div"),C.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',L=v(),E=d("h1"),E.textContent=`Welcome to ${ut}'s world!`,S=v(),M=d("div"),M.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',H=v(),W=d("h1"),W.textContent=`Welcome to ${ut}'s world!`,j=v(),O=d("div"),O.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',A=v(),N=d("h1"),N.textContent=`Welcome to ${ut}'s world!`,R=v(),q=d("div"),q.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',D=v(),I=d("h1"),I.textContent=`Welcome to ${ut}'s world!`,P=v(),Y=d("div"),Y.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',z=v(),X=d("h1"),X.textContent=`Welcome to ${ut}'s world!`,B=v(),U=d("div"),U.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',G=v(),J=d("h1"),J.textContent=`Welcome to ${ut}'s world!`,K=v(),Q=d("div"),Q.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',V=v(),Z=d("h1"),Z.textContent=`Welcome to ${ut}'s world!`,tt=v(),nt=d("div"),nt.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',ot=v(),et=d("h1"),et.textContent=`Welcome to ${ut}'s world!`,ct=v(),st=d("div"),st.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',it=v(),lt=d("h1"),lt.textContent=`Welcome to ${ut}'s world!`,rt=v(),at=d("div"),at.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',dt=v(),mt=d("h1"),mt.textContent=`Welcome to ${ut}'s world!`,vt=v(),ft=d("div"),ft.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',ht=v(),pt=d("h1"),pt.textContent=`Welcome to ${ut}'s world!`,$t=v(),gt=d("div"),gt.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',bt=v(),wt=d("h1"),wt.textContent=`Welcome to ${ut}'s world!`,yt=v(),xt=d("div"),xt.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',_t=v(),Tt=d("h1"),Tt.textContent=`Welcome to ${ut}'s world!`,Ft=v(),kt=d("div"),kt.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',Ct=v(),Lt=d("h1"),Lt.textContent=`Welcome to ${ut}'s world!`,Et=v(),St=d("div"),St.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',Mt=v(),Ht=d("h1"),Ht.textContent=`Welcome to ${ut}'s world!`,Wt=v(),jt=d("div"),jt.innerHTML='<div class="column">First column</div> \n\t\t<div class="column">Second column</div> \n\t\t<div class="column">Third column</div> \n\t\t<div class="column">Fourth column</div>',h(s,"class","columns"),h(f,"class","columns"),h(b,"class","columns"),h(_,"class","columns"),h(C,"class","columns"),h(M,"class","columns"),h(O,"class","columns"),h(q,"class","columns"),h(Y,"class","columns"),h(U,"class","columns"),h(Q,"class","columns"),h(nt,"class","columns"),h(st,"class","columns"),h(at,"class","columns"),h(ft,"class","columns"),h(gt,"class","columns"),h(xt,"class","columns"),h(kt,"class","columns"),h(St,"class","columns"),h(jt,"class","columns")},m(t,n){u(t,o,n),r(o,e),r(o,c),r(o,s),r(o,i),r(o,l),r(o,m),r(o,f),r(o,p),r(o,$),r(o,g),r(o,b),r(o,w),r(o,y),r(o,x),r(o,_),r(o,T),r(o,F),r(o,k),r(o,C),r(o,L),r(o,E),r(o,S),r(o,M),r(o,H),r(o,W),r(o,j),r(o,O),r(o,A),r(o,N),r(o,R),r(o,q),r(o,D),r(o,I),r(o,P),r(o,Y),r(o,z),r(o,X),r(o,B),r(o,U),r(o,G),r(o,J),r(o,K),r(o,Q),r(o,V),r(o,Z),r(o,tt),r(o,nt),r(o,ot),r(o,et),r(o,ct),r(o,st),r(o,it),r(o,lt),r(o,rt),r(o,at),r(o,dt),r(o,mt),r(o,vt),r(o,ft),r(o,ht),r(o,pt),r(o,$t),r(o,gt),r(o,bt),r(o,wt),r(o,yt),r(o,xt),r(o,_t),r(o,Tt),r(o,Ft),r(o,kt),r(o,Ct),r(o,Lt),r(o,Et),r(o,St),r(o,Mt),r(o,Ht),r(o,Wt),r(o,jt)},p:t,i:t,o:t,d(t){t&&a(o)}}}let ut="coding-orca";function at(n){let o,e;return{c(){o=d("div"),e=d("h1"),e.textContent=`Welcome to ${dt}'s ABOUT!`},m(t,n){u(t,o,n),r(o,e)},p:t,i:t,o:t,d(t){t&&a(o)}}}let dt="coding-orca";var mt={"/":class extends B{constructor(t){super(),X(this,t,null,rt,i,{})}},"/about":class extends B{constructor(t){super(),X(this,t,null,at,i,{})}}};function vt(n){let o,e,s,i,m,f,$,g,b,w,y,x,_,T,F,k,C,L,E,S;return{c(){o=d("nav"),e=d("div"),s=d("div"),i=d("div"),m=d("div"),f=d("a"),f.textContent="Coding Orca's Cave",$=v(),g=d("div"),g.innerHTML="<span></span> \n                <span></span> \n                <span></span>",b=v(),w=d("div"),y=d("div"),x=d("a"),x.textContent="Home",_=v(),T=d("a"),T.textContent="About",F=v(),k=d("hr"),C=v(),L=d("section"),L.innerHTML='<figure class="image is-3by1"><img src="/images/swimmingOrca1.gif" alt="banner"/></figure>',h(f,"class","brand-text has-text-white m-3"),h(f,"href","/"),h(m,"class","has-background-grey"),h(i,"class","navbar-item"),h(g,"class","navbar-burger burger"),p(g,"is-active",n[0]),h(s,"class","navbar-brand"),h(x,"class","navbar-item"),h(x,"href","/"),h(T,"class","navbar-item"),h(T,"href","/about"),h(y,"class","navbar-start"),h(w,"id","navMenu"),h(w,"class","navbar-menu"),p(w,"is-active",n[0]),h(e,"class","container"),h(o,"class","navbar is-white is-fixed-top"),h(L,"class","hero is-medium ml-4 mr-4 mb-3")},m(t,c){var a,d,v,h;u(t,o,c),r(o,e),r(e,s),r(s,i),r(i,m),r(m,f),r(s,$),r(s,g),r(e,b),r(e,w),r(w,y),r(y,x),r(y,_),r(y,T),u(t,F,c),u(t,k,c),u(t,C,c),u(t,L,c),E||(S=[l(et.call(null,f)),(a=g,d="click",v=n[1],a.addEventListener(d,v,h),()=>a.removeEventListener(d,v,h)),l(et.call(null,x)),l(et.call(null,T))],E=!0)},p(t,[n]){1&n&&p(g,"is-active",t[0]),1&n&&p(w,"is-active",t[0])},i:t,o:t,d(t){t&&a(o),t&&a(F),t&&a(k),t&&a(C),t&&a(L),E=!1,c(S)}}}function ft(t,n,o){let e=!1;return[e,()=>{o(0,e=!e)}]}class ht extends B{constructor(t){super(),X(this,t,ft,vt,i,{})}}function pt(n){let o,e,c,s;return o=new ht({}),c=new lt({props:{routes:mt}}),{c(){P(o.$$.fragment),e=v(),P(c.$$.fragment)},m(t,n){Y(o,t,n),u(t,e,n),Y(c,t,n),s=!0},p:t,i(t){s||(R(o.$$.fragment,t),R(c.$$.fragment,t),s=!0)},o(t){q(o.$$.fragment,t),q(c.$$.fragment,t),s=!1},d(t){z(o,t),t&&a(e),z(c,t)}}}return new class extends B{constructor(t){super(),X(this,t,null,pt,i,{})}}({target:document.body})}();
+
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+this.kokomai = this.kokomai || {};
+this.kokomai.github = this.kokomai.github || {};
+this.kokomai.github.io = (function () {
+    'use strict';
+
+    function noop() { }
+    function assign(tar, src) {
+        // @ts-ignore
+        for (const k in src)
+            tar[k] = src[k];
+        return tar;
+    }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    let src_url_equal_anchor;
+    function src_url_equal(element_src, url) {
+        if (!src_url_equal_anchor) {
+            src_url_equal_anchor = document.createElement('a');
+        }
+        src_url_equal_anchor.href = url;
+        return element_src === src_url_equal_anchor.href;
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+    function subscribe(store, ...callbacks) {
+        if (store == null) {
+            return noop;
+        }
+        const unsub = store.subscribe(...callbacks);
+        return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+    }
+    function action_destroyer(action_result) {
+        return action_result && is_function(action_result.destroy) ? action_result.destroy : noop;
+    }
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function empty() {
+        return text('');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else if (node.getAttribute(attribute) !== value)
+            node.setAttribute(attribute, value);
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function toggle_class(element, name, toggle) {
+        element.classList[toggle ? 'add' : 'remove'](name);
+    }
+    function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, bubbles, cancelable, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+    function get_current_component() {
+        if (!current_component)
+            throw new Error('Function called outside component initialization');
+        return current_component;
+    }
+    function afterUpdate(fn) {
+        get_current_component().$$.after_update.push(fn);
+    }
+    function onDestroy(fn) {
+        get_current_component().$$.on_destroy.push(fn);
+    }
+    function createEventDispatcher() {
+        const component = get_current_component();
+        return (type, detail, { cancelable = false } = {}) => {
+            const callbacks = component.$$.callbacks[type];
+            if (callbacks) {
+                // TODO are there situations where events could be dispatched
+                // in a server (non-DOM) environment?
+                const event = custom_event(type, detail, { cancelable });
+                callbacks.slice().forEach(fn => {
+                    fn.call(component, event);
+                });
+                return !event.defaultPrevented;
+            }
+            return true;
+        };
+    }
+    // TODO figure out if we still want to support
+    // shorthand events, or if we want to implement
+    // a real bubbling mechanism
+    function bubble(component, event) {
+        const callbacks = component.$$.callbacks[event.type];
+        if (callbacks) {
+            // @ts-ignore
+            callbacks.slice().forEach(fn => fn.call(this, event));
+        }
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function tick() {
+        schedule_update();
+        return resolved_promise;
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    // flush() calls callbacks in this order:
+    // 1. All beforeUpdate callbacks, in order: parents before children
+    // 2. All bind:this callbacks, in reverse order: children before parents.
+    // 3. All afterUpdate callbacks, in order: parents before children. EXCEPT
+    //    for afterUpdates called during the initial onMount, which are called in
+    //    reverse order: children before parents.
+    // Since callbacks might update component values, which could trigger another
+    // call to flush(), the following steps guard against this:
+    // 1. During beforeUpdate, any updated components will be added to the
+    //    dirty_components array and will cause a reentrant call to flush(). Because
+    //    the flush index is kept outside the function, the reentrant call will pick
+    //    up where the earlier call left off and go through all dirty components. The
+    //    current_component value is saved and restored so that the reentrant call will
+    //    not interfere with the "parent" flush() call.
+    // 2. bind:this callbacks cannot trigger new flush() calls.
+    // 3. During afterUpdate, any updated components will NOT have their afterUpdate
+    //    callback called a second time; the seen_callbacks set, outside the flush()
+    //    function, guarantees this behavior.
+    const seen_callbacks = new Set();
+    let flushidx = 0; // Do *not* move this inside the flush() function
+    function flush() {
+        const saved_component = current_component;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (flushidx < dirty_components.length) {
+                const component = dirty_components[flushidx];
+                flushidx++;
+                set_current_component(component);
+                update(component.$$);
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            flushidx = 0;
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        seen_callbacks.clear();
+        set_current_component(saved_component);
+    }
+    function update($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            const dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    const outroing = new Set();
+    let outros;
+    function group_outros() {
+        outros = {
+            r: 0,
+            c: [],
+            p: outros // parent group
+        };
+    }
+    function check_outros() {
+        if (!outros.r) {
+            run_all(outros.c);
+        }
+        outros = outros.p;
+    }
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function transition_out(block, local, detach, callback) {
+        if (block && block.o) {
+            if (outroing.has(block))
+                return;
+            outroing.add(block);
+            outros.c.push(() => {
+                outroing.delete(block);
+                if (callback) {
+                    if (detach)
+                        block.d(1);
+                    callback();
+                }
+            });
+            block.o(local);
+        }
+    }
+
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
+
+    function get_spread_update(levels, updates) {
+        const update = {};
+        const to_null_out = {};
+        const accounted_for = { $$scope: 1 };
+        let i = levels.length;
+        while (i--) {
+            const o = levels[i];
+            const n = updates[i];
+            if (n) {
+                for (const key in o) {
+                    if (!(key in n))
+                        to_null_out[key] = 1;
+                }
+                for (const key in n) {
+                    if (!accounted_for[key]) {
+                        update[key] = n[key];
+                        accounted_for[key] = 1;
+                    }
+                }
+                levels[i] = n;
+            }
+            else {
+                for (const key in o) {
+                    accounted_for[key] = 1;
+                }
+            }
+        }
+        for (const key in to_null_out) {
+            if (!(key in update))
+                update[key] = undefined;
+        }
+        return update;
+    }
+    function get_spread_object(spread_props) {
+        return typeof spread_props === 'object' && spread_props !== null ? spread_props : {};
+    }
+    function create_component(block) {
+        block && block.c();
+    }
+    function mount_component(component, target, anchor, customElement) {
+        const { fragment, on_mount, on_destroy, after_update } = component.$$;
+        fragment && fragment.m(target, anchor);
+        if (!customElement) {
+            // onMount happens before the initial afterUpdate
+            add_render_callback(() => {
+                const new_on_destroy = on_mount.map(run).filter(is_function);
+                if (on_destroy) {
+                    on_destroy.push(...new_on_destroy);
+                }
+                else {
+                    // Edge case - component was destroyed immediately,
+                    // most likely as a result of a binding initialising
+                    run_all(new_on_destroy);
+                }
+                component.$$.on_mount = [];
+            });
+        }
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        const $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, append_styles, dirty = [-1]) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            on_disconnect: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+            // everything else
+            callbacks: blank_object(),
+            dirty,
+            skip_bound: false,
+            root: options.target || parent_component.$$.root
+        };
+        append_styles && append_styles($$.root);
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, options.props || {}, (i, ret, ...rest) => {
+                const value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        $$.bound[i](value);
+                    if (ready)
+                        make_dirty(component, i);
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                const nodes = children(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor, options.customElement);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    /**
+     * Base class for Svelte components. Used when dev=false.
+     */
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set($$props) {
+            if (this.$$set && !is_empty($$props)) {
+                this.$$.skip_bound = true;
+                this.$$set($$props);
+                this.$$.skip_bound = false;
+            }
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, Object.assign({ version: '3.48.0' }, detail), { bubbles: true }));
+    }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev('SvelteDOMInsert', { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev('SvelteDOMRemove', { node });
+        detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
+        else
+            dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
+    }
+    function validate_slots(name, slot, keys) {
+        for (const slot_key of Object.keys(slot)) {
+            if (!~keys.indexOf(slot_key)) {
+                console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+            }
+        }
+    }
+    /**
+     * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
+     */
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error("'target' is a required option");
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn('Component was already destroyed'); // eslint-disable-line no-console
+            };
+        }
+        $capture_state() { }
+        $inject_state() { }
+    }
+
+    /**
+     * @typedef {Object} WrappedComponent Object returned by the `wrap` method
+     * @property {SvelteComponent} component - Component to load (this is always asynchronous)
+     * @property {RoutePrecondition[]} [conditions] - Route pre-conditions to validate
+     * @property {Object} [props] - Optional dictionary of static props
+     * @property {Object} [userData] - Optional user data dictionary
+     * @property {bool} _sveltesparouter - Internal flag; always set to true
+     */
+
+    /**
+     * @callback AsyncSvelteComponent
+     * @returns {Promise<SvelteComponent>} Returns a Promise that resolves with a Svelte component
+     */
+
+    /**
+     * @callback RoutePrecondition
+     * @param {RouteDetail} detail - Route detail object
+     * @returns {boolean|Promise<boolean>} If the callback returns a false-y value, it's interpreted as the precondition failed, so it aborts loading the component (and won't process other pre-condition callbacks)
+     */
+
+    /**
+     * @typedef {Object} WrapOptions Options object for the call to `wrap`
+     * @property {SvelteComponent} [component] - Svelte component to load (this is incompatible with `asyncComponent`)
+     * @property {AsyncSvelteComponent} [asyncComponent] - Function that returns a Promise that fulfills with a Svelte component (e.g. `{asyncComponent: () => import('Foo.svelte')}`)
+     * @property {SvelteComponent} [loadingComponent] - Svelte component to be displayed while the async route is loading (as a placeholder); when unset or false-y, no component is shown while component
+     * @property {object} [loadingParams] - Optional dictionary passed to the `loadingComponent` component as params (for an exported prop called `params`)
+     * @property {object} [userData] - Optional object that will be passed to events such as `routeLoading`, `routeLoaded`, `conditionsFailed`
+     * @property {object} [props] - Optional key-value dictionary of static props that will be passed to the component. The props are expanded with {...props}, so the key in the dictionary becomes the name of the prop.
+     * @property {RoutePrecondition[]|RoutePrecondition} [conditions] - Route pre-conditions to add, which will be executed in order
+     */
+
+    /**
+     * Wraps a component to enable multiple capabilities:
+     * 1. Using dynamically-imported component, with (e.g. `{asyncComponent: () => import('Foo.svelte')}`), which also allows bundlers to do code-splitting.
+     * 2. Adding route pre-conditions (e.g. `{conditions: [...]}`)
+     * 3. Adding static props that are passed to the component
+     * 4. Adding custom userData, which is passed to route events (e.g. route loaded events) or to route pre-conditions (e.g. `{userData: {foo: 'bar}}`)
+     * 
+     * @param {WrapOptions} args - Arguments object
+     * @returns {WrappedComponent} Wrapped component
+     */
+    function wrap$1(args) {
+        if (!args) {
+            throw Error('Parameter args is required')
+        }
+
+        // We need to have one and only one of component and asyncComponent
+        // This does a "XNOR"
+        if (!args.component == !args.asyncComponent) {
+            throw Error('One and only one of component and asyncComponent is required')
+        }
+
+        // If the component is not async, wrap it into a function returning a Promise
+        if (args.component) {
+            args.asyncComponent = () => Promise.resolve(args.component);
+        }
+
+        // Parameter asyncComponent and each item of conditions must be functions
+        if (typeof args.asyncComponent != 'function') {
+            throw Error('Parameter asyncComponent must be a function')
+        }
+        if (args.conditions) {
+            // Ensure it's an array
+            if (!Array.isArray(args.conditions)) {
+                args.conditions = [args.conditions];
+            }
+            for (let i = 0; i < args.conditions.length; i++) {
+                if (!args.conditions[i] || typeof args.conditions[i] != 'function') {
+                    throw Error('Invalid parameter conditions[' + i + ']')
+                }
+            }
+        }
+
+        // Check if we have a placeholder component
+        if (args.loadingComponent) {
+            args.asyncComponent.loading = args.loadingComponent;
+            args.asyncComponent.loadingParams = args.loadingParams || undefined;
+        }
+
+        // Returns an object that contains all the functions to execute too
+        // The _sveltesparouter flag is to confirm the object was created by this router
+        const obj = {
+            component: args.asyncComponent,
+            userData: args.userData,
+            conditions: (args.conditions && args.conditions.length) ? args.conditions : undefined,
+            props: (args.props && Object.keys(args.props).length) ? args.props : {},
+            _sveltesparouter: true
+        };
+
+        return obj
+    }
+
+    const subscriber_queue = [];
+    /**
+     * Creates a `Readable` store that allows reading by subscription.
+     * @param value initial value
+     * @param {StartStopNotifier}start start and stop notifications for subscriptions
+     */
+    function readable(value, start) {
+        return {
+            subscribe: writable(value, start).subscribe
+        };
+    }
+    /**
+     * Create a `Writable` store that allows both updating and reading by subscription.
+     * @param {*=}value initial value
+     * @param {StartStopNotifier=}start start and stop notifications for subscriptions
+     */
+    function writable(value, start = noop) {
+        let stop;
+        const subscribers = new Set();
+        function set(new_value) {
+            if (safe_not_equal(value, new_value)) {
+                value = new_value;
+                if (stop) { // store is ready
+                    const run_queue = !subscriber_queue.length;
+                    for (const subscriber of subscribers) {
+                        subscriber[1]();
+                        subscriber_queue.push(subscriber, value);
+                    }
+                    if (run_queue) {
+                        for (let i = 0; i < subscriber_queue.length; i += 2) {
+                            subscriber_queue[i][0](subscriber_queue[i + 1]);
+                        }
+                        subscriber_queue.length = 0;
+                    }
+                }
+            }
+        }
+        function update(fn) {
+            set(fn(value));
+        }
+        function subscribe(run, invalidate = noop) {
+            const subscriber = [run, invalidate];
+            subscribers.add(subscriber);
+            if (subscribers.size === 1) {
+                stop = start(set) || noop;
+            }
+            run(value);
+            return () => {
+                subscribers.delete(subscriber);
+                if (subscribers.size === 0) {
+                    stop();
+                    stop = null;
+                }
+            };
+        }
+        return { set, update, subscribe };
+    }
+    function derived(stores, fn, initial_value) {
+        const single = !Array.isArray(stores);
+        const stores_array = single
+            ? [stores]
+            : stores;
+        const auto = fn.length < 2;
+        return readable(initial_value, (set) => {
+            let inited = false;
+            const values = [];
+            let pending = 0;
+            let cleanup = noop;
+            const sync = () => {
+                if (pending) {
+                    return;
+                }
+                cleanup();
+                const result = fn(single ? values[0] : values, set);
+                if (auto) {
+                    set(result);
+                }
+                else {
+                    cleanup = is_function(result) ? result : noop;
+                }
+            };
+            const unsubscribers = stores_array.map((store, i) => subscribe(store, (value) => {
+                values[i] = value;
+                pending &= ~(1 << i);
+                if (inited) {
+                    sync();
+                }
+            }, () => {
+                pending |= (1 << i);
+            }));
+            inited = true;
+            sync();
+            return function stop() {
+                run_all(unsubscribers);
+                cleanup();
+            };
+        });
+    }
+
+    function parse(str, loose) {
+    	if (str instanceof RegExp) return { keys:false, pattern:str };
+    	var c, o, tmp, ext, keys=[], pattern='', arr = str.split('/');
+    	arr[0] || arr.shift();
+
+    	while (tmp = arr.shift()) {
+    		c = tmp[0];
+    		if (c === '*') {
+    			keys.push('wild');
+    			pattern += '/(.*)';
+    		} else if (c === ':') {
+    			o = tmp.indexOf('?', 1);
+    			ext = tmp.indexOf('.', 1);
+    			keys.push( tmp.substring(1, !!~o ? o : !!~ext ? ext : tmp.length) );
+    			pattern += !!~o && !~ext ? '(?:/([^/]+?))?' : '/([^/]+?)';
+    			if (!!~ext) pattern += (!!~o ? '?' : '') + '\\' + tmp.substring(ext);
+    		} else {
+    			pattern += '/' + tmp;
+    		}
+    	}
+
+    	return {
+    		keys: keys,
+    		pattern: new RegExp('^' + pattern + (loose ? '(?=$|\/)' : '\/?$'), 'i')
+    	};
+    }
+
+    /* node_modules\svelte-spa-router\Router.svelte generated by Svelte v3.48.0 */
+
+    const { Error: Error_1, Object: Object_1, console: console_1 } = globals;
+
+    // (251:0) {:else}
+    function create_else_block(ctx) {
+    	let switch_instance;
+    	let switch_instance_anchor;
+    	let current;
+    	const switch_instance_spread_levels = [/*props*/ ctx[2]];
+    	var switch_value = /*component*/ ctx[0];
+
+    	function switch_props(ctx) {
+    		let switch_instance_props = {};
+
+    		for (let i = 0; i < switch_instance_spread_levels.length; i += 1) {
+    			switch_instance_props = assign(switch_instance_props, switch_instance_spread_levels[i]);
+    		}
+
+    		return {
+    			props: switch_instance_props,
+    			$$inline: true
+    		};
+    	}
+
+    	if (switch_value) {
+    		switch_instance = new switch_value(switch_props());
+    		switch_instance.$on("routeEvent", /*routeEvent_handler_1*/ ctx[7]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			if (switch_instance) create_component(switch_instance.$$.fragment);
+    			switch_instance_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if (switch_instance) {
+    				mount_component(switch_instance, target, anchor);
+    			}
+
+    			insert_dev(target, switch_instance_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const switch_instance_changes = (dirty & /*props*/ 4)
+    			? get_spread_update(switch_instance_spread_levels, [get_spread_object(/*props*/ ctx[2])])
+    			: {};
+
+    			if (switch_value !== (switch_value = /*component*/ ctx[0])) {
+    				if (switch_instance) {
+    					group_outros();
+    					const old_component = switch_instance;
+
+    					transition_out(old_component.$$.fragment, 1, 0, () => {
+    						destroy_component(old_component, 1);
+    					});
+
+    					check_outros();
+    				}
+
+    				if (switch_value) {
+    					switch_instance = new switch_value(switch_props());
+    					switch_instance.$on("routeEvent", /*routeEvent_handler_1*/ ctx[7]);
+    					create_component(switch_instance.$$.fragment);
+    					transition_in(switch_instance.$$.fragment, 1);
+    					mount_component(switch_instance, switch_instance_anchor.parentNode, switch_instance_anchor);
+    				} else {
+    					switch_instance = null;
+    				}
+    			} else if (switch_value) {
+    				switch_instance.$set(switch_instance_changes);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			if (switch_instance) transition_in(switch_instance.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (switch_instance) transition_out(switch_instance.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(switch_instance_anchor);
+    			if (switch_instance) destroy_component(switch_instance, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(251:0) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (244:0) {#if componentParams}
+    function create_if_block(ctx) {
+    	let switch_instance;
+    	let switch_instance_anchor;
+    	let current;
+    	const switch_instance_spread_levels = [{ params: /*componentParams*/ ctx[1] }, /*props*/ ctx[2]];
+    	var switch_value = /*component*/ ctx[0];
+
+    	function switch_props(ctx) {
+    		let switch_instance_props = {};
+
+    		for (let i = 0; i < switch_instance_spread_levels.length; i += 1) {
+    			switch_instance_props = assign(switch_instance_props, switch_instance_spread_levels[i]);
+    		}
+
+    		return {
+    			props: switch_instance_props,
+    			$$inline: true
+    		};
+    	}
+
+    	if (switch_value) {
+    		switch_instance = new switch_value(switch_props());
+    		switch_instance.$on("routeEvent", /*routeEvent_handler*/ ctx[6]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			if (switch_instance) create_component(switch_instance.$$.fragment);
+    			switch_instance_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if (switch_instance) {
+    				mount_component(switch_instance, target, anchor);
+    			}
+
+    			insert_dev(target, switch_instance_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const switch_instance_changes = (dirty & /*componentParams, props*/ 6)
+    			? get_spread_update(switch_instance_spread_levels, [
+    					dirty & /*componentParams*/ 2 && { params: /*componentParams*/ ctx[1] },
+    					dirty & /*props*/ 4 && get_spread_object(/*props*/ ctx[2])
+    				])
+    			: {};
+
+    			if (switch_value !== (switch_value = /*component*/ ctx[0])) {
+    				if (switch_instance) {
+    					group_outros();
+    					const old_component = switch_instance;
+
+    					transition_out(old_component.$$.fragment, 1, 0, () => {
+    						destroy_component(old_component, 1);
+    					});
+
+    					check_outros();
+    				}
+
+    				if (switch_value) {
+    					switch_instance = new switch_value(switch_props());
+    					switch_instance.$on("routeEvent", /*routeEvent_handler*/ ctx[6]);
+    					create_component(switch_instance.$$.fragment);
+    					transition_in(switch_instance.$$.fragment, 1);
+    					mount_component(switch_instance, switch_instance_anchor.parentNode, switch_instance_anchor);
+    				} else {
+    					switch_instance = null;
+    				}
+    			} else if (switch_value) {
+    				switch_instance.$set(switch_instance_changes);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			if (switch_instance) transition_in(switch_instance.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (switch_instance) transition_out(switch_instance.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(switch_instance_anchor);
+    			if (switch_instance) destroy_component(switch_instance, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(244:0) {#if componentParams}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$4(ctx) {
+    	let current_block_type_index;
+    	let if_block;
+    	let if_block_anchor;
+    	let current;
+    	const if_block_creators = [create_if_block, create_else_block];
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*componentParams*/ ctx[1]) return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	const block = {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		l: function claim(nodes) {
+    			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			if_blocks[current_block_type_index].m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block = if_blocks[current_block_type_index];
+
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				} else {
+    					if_block.p(ctx, dirty);
+    				}
+
+    				transition_in(if_block, 1);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if_blocks[current_block_type_index].d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$4.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function wrap(component, userData, ...conditions) {
+    	// Use the new wrap method and show a deprecation warning
+    	// eslint-disable-next-line no-console
+    	console.warn('Method `wrap` from `svelte-spa-router` is deprecated and will be removed in a future version. Please use `svelte-spa-router/wrap` instead. See http://bit.ly/svelte-spa-router-upgrading');
+
+    	return wrap$1({ component, userData, conditions });
+    }
+
+    /**
+     * @typedef {Object} Location
+     * @property {string} location - Location (page/view), for example `/book`
+     * @property {string} [querystring] - Querystring from the hash, as a string not parsed
+     */
+    /**
+     * Returns the current location from the hash.
+     *
+     * @returns {Location} Location object
+     * @private
+     */
+    function getLocation() {
+    	const hashPosition = window.location.href.indexOf('#/');
+
+    	let location = hashPosition > -1
+    	? window.location.href.substr(hashPosition + 1)
+    	: '/';
+
+    	// Check if there's a querystring
+    	const qsPosition = location.indexOf('?');
+
+    	let querystring = '';
+
+    	if (qsPosition > -1) {
+    		querystring = location.substr(qsPosition + 1);
+    		location = location.substr(0, qsPosition);
+    	}
+
+    	return { location, querystring };
+    }
+
+    const loc = readable(null, // eslint-disable-next-line prefer-arrow-callback
+    function start(set) {
+    	set(getLocation());
+
+    	const update = () => {
+    		set(getLocation());
+    	};
+
+    	window.addEventListener('hashchange', update, false);
+
+    	return function stop() {
+    		window.removeEventListener('hashchange', update, false);
+    	};
+    });
+
+    const location = derived(loc, $loc => $loc.location);
+    const querystring = derived(loc, $loc => $loc.querystring);
+    const params = writable(undefined);
+
+    async function push(location) {
+    	if (!location || location.length < 1 || location.charAt(0) != '/' && location.indexOf('#/') !== 0) {
+    		throw Error('Invalid parameter location');
+    	}
+
+    	// Execute this code when the current call stack is complete
+    	await tick();
+
+    	// Note: this will include scroll state in history even when restoreScrollState is false
+    	history.replaceState(
+    		{
+    			...history.state,
+    			__svelte_spa_router_scrollX: window.scrollX,
+    			__svelte_spa_router_scrollY: window.scrollY
+    		},
+    		undefined,
+    		undefined
+    	);
+
+    	window.location.hash = (location.charAt(0) == '#' ? '' : '#') + location;
+    }
+
+    async function pop() {
+    	// Execute this code when the current call stack is complete
+    	await tick();
+
+    	window.history.back();
+    }
+
+    async function replace(location) {
+    	if (!location || location.length < 1 || location.charAt(0) != '/' && location.indexOf('#/') !== 0) {
+    		throw Error('Invalid parameter location');
+    	}
+
+    	// Execute this code when the current call stack is complete
+    	await tick();
+
+    	const dest = (location.charAt(0) == '#' ? '' : '#') + location;
+
+    	try {
+    		const newState = { ...history.state };
+    		delete newState['__svelte_spa_router_scrollX'];
+    		delete newState['__svelte_spa_router_scrollY'];
+    		window.history.replaceState(newState, undefined, dest);
+    	} catch(e) {
+    		// eslint-disable-next-line no-console
+    		console.warn('Caught exception while replacing the current page. If you\'re running this in the Svelte REPL, please note that the `replace` method might not work in this environment.');
+    	}
+
+    	// The method above doesn't trigger the hashchange event, so let's do that manually
+    	window.dispatchEvent(new Event('hashchange'));
+    }
+
+    function link(node, opts) {
+    	opts = linkOpts(opts);
+
+    	// Only apply to <a> tags
+    	if (!node || !node.tagName || node.tagName.toLowerCase() != 'a') {
+    		throw Error('Action "link" can only be used with <a> tags');
+    	}
+
+    	updateLink(node, opts);
+
+    	return {
+    		update(updated) {
+    			updated = linkOpts(updated);
+    			updateLink(node, updated);
+    		}
+    	};
+    }
+
+    // Internal function used by the link function
+    function updateLink(node, opts) {
+    	let href = opts.href || node.getAttribute('href');
+
+    	// Destination must start with '/' or '#/'
+    	if (href && href.charAt(0) == '/') {
+    		// Add # to the href attribute
+    		href = '#' + href;
+    	} else if (!href || href.length < 2 || href.slice(0, 2) != '#/') {
+    		throw Error('Invalid value for "href" attribute: ' + href);
+    	}
+
+    	node.setAttribute('href', href);
+
+    	node.addEventListener('click', event => {
+    		// Prevent default anchor onclick behaviour
+    		event.preventDefault();
+
+    		if (!opts.disabled) {
+    			scrollstateHistoryHandler(event.currentTarget.getAttribute('href'));
+    		}
+    	});
+    }
+
+    // Internal function that ensures the argument of the link action is always an object
+    function linkOpts(val) {
+    	if (val && typeof val == 'string') {
+    		return { href: val };
+    	} else {
+    		return val || {};
+    	}
+    }
+
+    /**
+     * The handler attached to an anchor tag responsible for updating the
+     * current history state with the current scroll state
+     *
+     * @param {string} href - Destination
+     */
+    function scrollstateHistoryHandler(href) {
+    	// Setting the url (3rd arg) to href will break clicking for reasons, so don't try to do that
+    	history.replaceState(
+    		{
+    			...history.state,
+    			__svelte_spa_router_scrollX: window.scrollX,
+    			__svelte_spa_router_scrollY: window.scrollY
+    		},
+    		undefined,
+    		undefined
+    	);
+
+    	// This will force an update as desired, but this time our scroll state will be attached
+    	window.location.hash = href;
+    }
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Router', slots, []);
+    	let { routes = {} } = $$props;
+    	let { prefix = '' } = $$props;
+    	let { restoreScrollState = false } = $$props;
+
+    	/**
+     * Container for a route: path, component
+     */
+    	class RouteItem {
+    		/**
+     * Initializes the object and creates a regular expression from the path, using regexparam.
+     *
+     * @param {string} path - Path to the route (must start with '/' or '*')
+     * @param {SvelteComponent|WrappedComponent} component - Svelte component for the route, optionally wrapped
+     */
+    		constructor(path, component) {
+    			if (!component || typeof component != 'function' && (typeof component != 'object' || component._sveltesparouter !== true)) {
+    				throw Error('Invalid component object');
+    			}
+
+    			// Path must be a regular or expression, or a string starting with '/' or '*'
+    			if (!path || typeof path == 'string' && (path.length < 1 || path.charAt(0) != '/' && path.charAt(0) != '*') || typeof path == 'object' && !(path instanceof RegExp)) {
+    				throw Error('Invalid value for "path" argument - strings must start with / or *');
+    			}
+
+    			const { pattern, keys } = parse(path);
+    			this.path = path;
+
+    			// Check if the component is wrapped and we have conditions
+    			if (typeof component == 'object' && component._sveltesparouter === true) {
+    				this.component = component.component;
+    				this.conditions = component.conditions || [];
+    				this.userData = component.userData;
+    				this.props = component.props || {};
+    			} else {
+    				// Convert the component to a function that returns a Promise, to normalize it
+    				this.component = () => Promise.resolve(component);
+
+    				this.conditions = [];
+    				this.props = {};
+    			}
+
+    			this._pattern = pattern;
+    			this._keys = keys;
+    		}
+
+    		/**
+     * Checks if `path` matches the current route.
+     * If there's a match, will return the list of parameters from the URL (if any).
+     * In case of no match, the method will return `null`.
+     *
+     * @param {string} path - Path to test
+     * @returns {null|Object.<string, string>} List of paramters from the URL if there's a match, or `null` otherwise.
+     */
+    		match(path) {
+    			// If there's a prefix, check if it matches the start of the path.
+    			// If not, bail early, else remove it before we run the matching.
+    			if (prefix) {
+    				if (typeof prefix == 'string') {
+    					if (path.startsWith(prefix)) {
+    						path = path.substr(prefix.length) || '/';
+    					} else {
+    						return null;
+    					}
+    				} else if (prefix instanceof RegExp) {
+    					const match = path.match(prefix);
+
+    					if (match && match[0]) {
+    						path = path.substr(match[0].length) || '/';
+    					} else {
+    						return null;
+    					}
+    				}
+    			}
+
+    			// Check if the pattern matches
+    			const matches = this._pattern.exec(path);
+
+    			if (matches === null) {
+    				return null;
+    			}
+
+    			// If the input was a regular expression, this._keys would be false, so return matches as is
+    			if (this._keys === false) {
+    				return matches;
+    			}
+
+    			const out = {};
+    			let i = 0;
+
+    			while (i < this._keys.length) {
+    				// In the match parameters, URL-decode all values
+    				try {
+    					out[this._keys[i]] = decodeURIComponent(matches[i + 1] || '') || null;
+    				} catch(e) {
+    					out[this._keys[i]] = null;
+    				}
+
+    				i++;
+    			}
+
+    			return out;
+    		}
+
+    		/**
+     * Dictionary with route details passed to the pre-conditions functions, as well as the `routeLoading`, `routeLoaded` and `conditionsFailed` events
+     * @typedef {Object} RouteDetail
+     * @property {string|RegExp} route - Route matched as defined in the route definition (could be a string or a reguar expression object)
+     * @property {string} location - Location path
+     * @property {string} querystring - Querystring from the hash
+     * @property {object} [userData] - Custom data passed by the user
+     * @property {SvelteComponent} [component] - Svelte component (only in `routeLoaded` events)
+     * @property {string} [name] - Name of the Svelte component (only in `routeLoaded` events)
+     */
+    		/**
+     * Executes all conditions (if any) to control whether the route can be shown. Conditions are executed in the order they are defined, and if a condition fails, the following ones aren't executed.
+     * 
+     * @param {RouteDetail} detail - Route detail
+     * @returns {boolean} Returns true if all the conditions succeeded
+     */
+    		async checkConditions(detail) {
+    			for (let i = 0; i < this.conditions.length; i++) {
+    				if (!await this.conditions[i](detail)) {
+    					return false;
+    				}
+    			}
+
+    			return true;
+    		}
+    	}
+
+    	// Set up all routes
+    	const routesList = [];
+
+    	if (routes instanceof Map) {
+    		// If it's a map, iterate on it right away
+    		routes.forEach((route, path) => {
+    			routesList.push(new RouteItem(path, route));
+    		});
+    	} else {
+    		// We have an object, so iterate on its own properties
+    		Object.keys(routes).forEach(path => {
+    			routesList.push(new RouteItem(path, routes[path]));
+    		});
+    	}
+
+    	// Props for the component to render
+    	let component = null;
+
+    	let componentParams = null;
+    	let props = {};
+
+    	// Event dispatcher from Svelte
+    	const dispatch = createEventDispatcher();
+
+    	// Just like dispatch, but executes on the next iteration of the event loop
+    	async function dispatchNextTick(name, detail) {
+    		// Execute this code when the current call stack is complete
+    		await tick();
+
+    		dispatch(name, detail);
+    	}
+
+    	// If this is set, then that means we have popped into this var the state of our last scroll position
+    	let previousScrollState = null;
+
+    	let popStateChanged = null;
+
+    	if (restoreScrollState) {
+    		popStateChanged = event => {
+    			// If this event was from our history.replaceState, event.state will contain
+    			// our scroll history. Otherwise, event.state will be null (like on forward
+    			// navigation)
+    			if (event.state && event.state.__svelte_spa_router_scrollY) {
+    				previousScrollState = event.state;
+    			} else {
+    				previousScrollState = null;
+    			}
+    		};
+
+    		// This is removed in the destroy() invocation below
+    		window.addEventListener('popstate', popStateChanged);
+
+    		afterUpdate(() => {
+    			// If this exists, then this is a back navigation: restore the scroll position
+    			if (previousScrollState) {
+    				window.scrollTo(previousScrollState.__svelte_spa_router_scrollX, previousScrollState.__svelte_spa_router_scrollY);
+    			} else {
+    				// Otherwise this is a forward navigation: scroll to top
+    				window.scrollTo(0, 0);
+    			}
+    		});
+    	}
+
+    	// Always have the latest value of loc
+    	let lastLoc = null;
+
+    	// Current object of the component loaded
+    	let componentObj = null;
+
+    	// Handle hash change events
+    	// Listen to changes in the $loc store and update the page
+    	// Do not use the $: syntax because it gets triggered by too many things
+    	const unsubscribeLoc = loc.subscribe(async newLoc => {
+    		lastLoc = newLoc;
+
+    		// Find a route matching the location
+    		let i = 0;
+
+    		while (i < routesList.length) {
+    			const match = routesList[i].match(newLoc.location);
+
+    			if (!match) {
+    				i++;
+    				continue;
+    			}
+
+    			const detail = {
+    				route: routesList[i].path,
+    				location: newLoc.location,
+    				querystring: newLoc.querystring,
+    				userData: routesList[i].userData,
+    				params: match && typeof match == 'object' && Object.keys(match).length
+    				? match
+    				: null
+    			};
+
+    			// Check if the route can be loaded - if all conditions succeed
+    			if (!await routesList[i].checkConditions(detail)) {
+    				// Don't display anything
+    				$$invalidate(0, component = null);
+
+    				componentObj = null;
+
+    				// Trigger an event to notify the user, then exit
+    				dispatchNextTick('conditionsFailed', detail);
+
+    				return;
+    			}
+
+    			// Trigger an event to alert that we're loading the route
+    			// We need to clone the object on every event invocation so we don't risk the object to be modified in the next tick
+    			dispatchNextTick('routeLoading', Object.assign({}, detail));
+
+    			// If there's a component to show while we're loading the route, display it
+    			const obj = routesList[i].component;
+
+    			// Do not replace the component if we're loading the same one as before, to avoid the route being unmounted and re-mounted
+    			if (componentObj != obj) {
+    				if (obj.loading) {
+    					$$invalidate(0, component = obj.loading);
+    					componentObj = obj;
+    					$$invalidate(1, componentParams = obj.loadingParams);
+    					$$invalidate(2, props = {});
+
+    					// Trigger the routeLoaded event for the loading component
+    					// Create a copy of detail so we don't modify the object for the dynamic route (and the dynamic route doesn't modify our object too)
+    					dispatchNextTick('routeLoaded', Object.assign({}, detail, {
+    						component,
+    						name: component.name,
+    						params: componentParams
+    					}));
+    				} else {
+    					$$invalidate(0, component = null);
+    					componentObj = null;
+    				}
+
+    				// Invoke the Promise
+    				const loaded = await obj();
+
+    				// Now that we're here, after the promise resolved, check if we still want this component, as the user might have navigated to another page in the meanwhile
+    				if (newLoc != lastLoc) {
+    					// Don't update the component, just exit
+    					return;
+    				}
+
+    				// If there is a "default" property, which is used by async routes, then pick that
+    				$$invalidate(0, component = loaded && loaded.default || loaded);
+
+    				componentObj = obj;
+    			}
+
+    			// Set componentParams only if we have a match, to avoid a warning similar to `<Component> was created with unknown prop 'params'`
+    			// Of course, this assumes that developers always add a "params" prop when they are expecting parameters
+    			if (match && typeof match == 'object' && Object.keys(match).length) {
+    				$$invalidate(1, componentParams = match);
+    			} else {
+    				$$invalidate(1, componentParams = null);
+    			}
+
+    			// Set static props, if any
+    			$$invalidate(2, props = routesList[i].props);
+
+    			// Dispatch the routeLoaded event then exit
+    			// We need to clone the object on every event invocation so we don't risk the object to be modified in the next tick
+    			dispatchNextTick('routeLoaded', Object.assign({}, detail, {
+    				component,
+    				name: component.name,
+    				params: componentParams
+    			})).then(() => {
+    				params.set(componentParams);
+    			});
+
+    			return;
+    		}
+
+    		// If we're still here, there was no match, so show the empty component
+    		$$invalidate(0, component = null);
+
+    		componentObj = null;
+    		params.set(undefined);
+    	});
+
+    	onDestroy(() => {
+    		unsubscribeLoc();
+    		popStateChanged && window.removeEventListener('popstate', popStateChanged);
+    	});
+
+    	const writable_props = ['routes', 'prefix', 'restoreScrollState'];
+
+    	Object_1.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Router> was created with unknown prop '${key}'`);
+    	});
+
+    	function routeEvent_handler(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function routeEvent_handler_1(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	$$self.$$set = $$props => {
+    		if ('routes' in $$props) $$invalidate(3, routes = $$props.routes);
+    		if ('prefix' in $$props) $$invalidate(4, prefix = $$props.prefix);
+    		if ('restoreScrollState' in $$props) $$invalidate(5, restoreScrollState = $$props.restoreScrollState);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		readable,
+    		writable,
+    		derived,
+    		tick,
+    		_wrap: wrap$1,
+    		wrap,
+    		getLocation,
+    		loc,
+    		location,
+    		querystring,
+    		params,
+    		push,
+    		pop,
+    		replace,
+    		link,
+    		updateLink,
+    		linkOpts,
+    		scrollstateHistoryHandler,
+    		onDestroy,
+    		createEventDispatcher,
+    		afterUpdate,
+    		parse,
+    		routes,
+    		prefix,
+    		restoreScrollState,
+    		RouteItem,
+    		routesList,
+    		component,
+    		componentParams,
+    		props,
+    		dispatch,
+    		dispatchNextTick,
+    		previousScrollState,
+    		popStateChanged,
+    		lastLoc,
+    		componentObj,
+    		unsubscribeLoc
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('routes' in $$props) $$invalidate(3, routes = $$props.routes);
+    		if ('prefix' in $$props) $$invalidate(4, prefix = $$props.prefix);
+    		if ('restoreScrollState' in $$props) $$invalidate(5, restoreScrollState = $$props.restoreScrollState);
+    		if ('component' in $$props) $$invalidate(0, component = $$props.component);
+    		if ('componentParams' in $$props) $$invalidate(1, componentParams = $$props.componentParams);
+    		if ('props' in $$props) $$invalidate(2, props = $$props.props);
+    		if ('previousScrollState' in $$props) previousScrollState = $$props.previousScrollState;
+    		if ('popStateChanged' in $$props) popStateChanged = $$props.popStateChanged;
+    		if ('lastLoc' in $$props) lastLoc = $$props.lastLoc;
+    		if ('componentObj' in $$props) componentObj = $$props.componentObj;
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*restoreScrollState*/ 32) {
+    			// Update history.scrollRestoration depending on restoreScrollState
+    			history.scrollRestoration = restoreScrollState ? 'manual' : 'auto';
+    		}
+    	};
+
+    	return [
+    		component,
+    		componentParams,
+    		props,
+    		routes,
+    		prefix,
+    		restoreScrollState,
+    		routeEvent_handler,
+    		routeEvent_handler_1
+    	];
+    }
+
+    class Router extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
+    			routes: 3,
+    			prefix: 4,
+    			restoreScrollState: 5
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Router",
+    			options,
+    			id: create_fragment$4.name
+    		});
+    	}
+
+    	get routes() {
+    		throw new Error_1("<Router>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set routes(value) {
+    		throw new Error_1("<Router>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get prefix() {
+    		throw new Error_1("<Router>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set prefix(value) {
+    		throw new Error_1("<Router>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get restoreScrollState() {
+    		throw new Error_1("<Router>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set restoreScrollState(value) {
+    		throw new Error_1("<Router>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\routes\Home.svelte generated by Svelte v3.48.0 */
+
+    const file$2 = "src\\routes\\Home.svelte";
+
+    function create_fragment$3(ctx) {
+    	let div100;
+    	let h10;
+    	let t3;
+    	let div4;
+    	let div0;
+    	let t5;
+    	let div1;
+    	let t7;
+    	let div2;
+    	let t9;
+    	let div3;
+    	let t11;
+    	let h11;
+    	let t15;
+    	let div9;
+    	let div5;
+    	let t17;
+    	let div6;
+    	let t19;
+    	let div7;
+    	let t21;
+    	let div8;
+    	let t23;
+    	let h12;
+    	let t27;
+    	let div14;
+    	let div10;
+    	let t29;
+    	let div11;
+    	let t31;
+    	let div12;
+    	let t33;
+    	let div13;
+    	let t35;
+    	let h13;
+    	let t39;
+    	let div19;
+    	let div15;
+    	let t41;
+    	let div16;
+    	let t43;
+    	let div17;
+    	let t45;
+    	let div18;
+    	let t47;
+    	let h14;
+    	let t51;
+    	let div24;
+    	let div20;
+    	let t53;
+    	let div21;
+    	let t55;
+    	let div22;
+    	let t57;
+    	let div23;
+    	let t59;
+    	let h15;
+    	let t63;
+    	let div29;
+    	let div25;
+    	let t65;
+    	let div26;
+    	let t67;
+    	let div27;
+    	let t69;
+    	let div28;
+    	let t71;
+    	let h16;
+    	let t75;
+    	let div34;
+    	let div30;
+    	let t77;
+    	let div31;
+    	let t79;
+    	let div32;
+    	let t81;
+    	let div33;
+    	let t83;
+    	let h17;
+    	let t87;
+    	let div39;
+    	let div35;
+    	let t89;
+    	let div36;
+    	let t91;
+    	let div37;
+    	let t93;
+    	let div38;
+    	let t95;
+    	let h18;
+    	let t99;
+    	let div44;
+    	let div40;
+    	let t101;
+    	let div41;
+    	let t103;
+    	let div42;
+    	let t105;
+    	let div43;
+    	let t107;
+    	let h19;
+    	let t111;
+    	let div49;
+    	let div45;
+    	let t113;
+    	let div46;
+    	let t115;
+    	let div47;
+    	let t117;
+    	let div48;
+    	let t119;
+    	let h110;
+    	let t123;
+    	let div54;
+    	let div50;
+    	let t125;
+    	let div51;
+    	let t127;
+    	let div52;
+    	let t129;
+    	let div53;
+    	let t131;
+    	let h111;
+    	let t135;
+    	let div59;
+    	let div55;
+    	let t137;
+    	let div56;
+    	let t139;
+    	let div57;
+    	let t141;
+    	let div58;
+    	let t143;
+    	let h112;
+    	let t147;
+    	let div64;
+    	let div60;
+    	let t149;
+    	let div61;
+    	let t151;
+    	let div62;
+    	let t153;
+    	let div63;
+    	let t155;
+    	let h113;
+    	let t159;
+    	let div69;
+    	let div65;
+    	let t161;
+    	let div66;
+    	let t163;
+    	let div67;
+    	let t165;
+    	let div68;
+    	let t167;
+    	let h114;
+    	let t171;
+    	let div74;
+    	let div70;
+    	let t173;
+    	let div71;
+    	let t175;
+    	let div72;
+    	let t177;
+    	let div73;
+    	let t179;
+    	let h115;
+    	let t183;
+    	let div79;
+    	let div75;
+    	let t185;
+    	let div76;
+    	let t187;
+    	let div77;
+    	let t189;
+    	let div78;
+    	let t191;
+    	let h116;
+    	let t195;
+    	let div84;
+    	let div80;
+    	let t197;
+    	let div81;
+    	let t199;
+    	let div82;
+    	let t201;
+    	let div83;
+    	let t203;
+    	let h117;
+    	let t207;
+    	let div89;
+    	let div85;
+    	let t209;
+    	let div86;
+    	let t211;
+    	let div87;
+    	let t213;
+    	let div88;
+    	let t215;
+    	let h118;
+    	let t219;
+    	let div94;
+    	let div90;
+    	let t221;
+    	let div91;
+    	let t223;
+    	let div92;
+    	let t225;
+    	let div93;
+    	let t227;
+    	let h119;
+    	let t231;
+    	let div99;
+    	let div95;
+    	let t233;
+    	let div96;
+    	let t235;
+    	let div97;
+    	let t237;
+    	let div98;
+
+    	const block = {
+    		c: function create() {
+    			div100 = element("div");
+    			h10 = element("h1");
+    			h10.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t3 = space();
+    			div4 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "First column";
+    			t5 = space();
+    			div1 = element("div");
+    			div1.textContent = "Second column";
+    			t7 = space();
+    			div2 = element("div");
+    			div2.textContent = "Third column";
+    			t9 = space();
+    			div3 = element("div");
+    			div3.textContent = "Fourth column";
+    			t11 = space();
+    			h11 = element("h1");
+    			h11.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t15 = space();
+    			div9 = element("div");
+    			div5 = element("div");
+    			div5.textContent = "First column";
+    			t17 = space();
+    			div6 = element("div");
+    			div6.textContent = "Second column";
+    			t19 = space();
+    			div7 = element("div");
+    			div7.textContent = "Third column";
+    			t21 = space();
+    			div8 = element("div");
+    			div8.textContent = "Fourth column";
+    			t23 = space();
+    			h12 = element("h1");
+    			h12.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t27 = space();
+    			div14 = element("div");
+    			div10 = element("div");
+    			div10.textContent = "First column";
+    			t29 = space();
+    			div11 = element("div");
+    			div11.textContent = "Second column";
+    			t31 = space();
+    			div12 = element("div");
+    			div12.textContent = "Third column";
+    			t33 = space();
+    			div13 = element("div");
+    			div13.textContent = "Fourth column";
+    			t35 = space();
+    			h13 = element("h1");
+    			h13.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t39 = space();
+    			div19 = element("div");
+    			div15 = element("div");
+    			div15.textContent = "First column";
+    			t41 = space();
+    			div16 = element("div");
+    			div16.textContent = "Second column";
+    			t43 = space();
+    			div17 = element("div");
+    			div17.textContent = "Third column";
+    			t45 = space();
+    			div18 = element("div");
+    			div18.textContent = "Fourth column";
+    			t47 = space();
+    			h14 = element("h1");
+    			h14.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t51 = space();
+    			div24 = element("div");
+    			div20 = element("div");
+    			div20.textContent = "First column";
+    			t53 = space();
+    			div21 = element("div");
+    			div21.textContent = "Second column";
+    			t55 = space();
+    			div22 = element("div");
+    			div22.textContent = "Third column";
+    			t57 = space();
+    			div23 = element("div");
+    			div23.textContent = "Fourth column";
+    			t59 = space();
+    			h15 = element("h1");
+    			h15.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t63 = space();
+    			div29 = element("div");
+    			div25 = element("div");
+    			div25.textContent = "First column";
+    			t65 = space();
+    			div26 = element("div");
+    			div26.textContent = "Second column";
+    			t67 = space();
+    			div27 = element("div");
+    			div27.textContent = "Third column";
+    			t69 = space();
+    			div28 = element("div");
+    			div28.textContent = "Fourth column";
+    			t71 = space();
+    			h16 = element("h1");
+    			h16.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t75 = space();
+    			div34 = element("div");
+    			div30 = element("div");
+    			div30.textContent = "First column";
+    			t77 = space();
+    			div31 = element("div");
+    			div31.textContent = "Second column";
+    			t79 = space();
+    			div32 = element("div");
+    			div32.textContent = "Third column";
+    			t81 = space();
+    			div33 = element("div");
+    			div33.textContent = "Fourth column";
+    			t83 = space();
+    			h17 = element("h1");
+    			h17.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t87 = space();
+    			div39 = element("div");
+    			div35 = element("div");
+    			div35.textContent = "First column";
+    			t89 = space();
+    			div36 = element("div");
+    			div36.textContent = "Second column";
+    			t91 = space();
+    			div37 = element("div");
+    			div37.textContent = "Third column";
+    			t93 = space();
+    			div38 = element("div");
+    			div38.textContent = "Fourth column";
+    			t95 = space();
+    			h18 = element("h1");
+    			h18.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t99 = space();
+    			div44 = element("div");
+    			div40 = element("div");
+    			div40.textContent = "First column";
+    			t101 = space();
+    			div41 = element("div");
+    			div41.textContent = "Second column";
+    			t103 = space();
+    			div42 = element("div");
+    			div42.textContent = "Third column";
+    			t105 = space();
+    			div43 = element("div");
+    			div43.textContent = "Fourth column";
+    			t107 = space();
+    			h19 = element("h1");
+    			h19.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t111 = space();
+    			div49 = element("div");
+    			div45 = element("div");
+    			div45.textContent = "First column";
+    			t113 = space();
+    			div46 = element("div");
+    			div46.textContent = "Second column";
+    			t115 = space();
+    			div47 = element("div");
+    			div47.textContent = "Third column";
+    			t117 = space();
+    			div48 = element("div");
+    			div48.textContent = "Fourth column";
+    			t119 = space();
+    			h110 = element("h1");
+    			h110.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t123 = space();
+    			div54 = element("div");
+    			div50 = element("div");
+    			div50.textContent = "First column";
+    			t125 = space();
+    			div51 = element("div");
+    			div51.textContent = "Second column";
+    			t127 = space();
+    			div52 = element("div");
+    			div52.textContent = "Third column";
+    			t129 = space();
+    			div53 = element("div");
+    			div53.textContent = "Fourth column";
+    			t131 = space();
+    			h111 = element("h1");
+    			h111.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t135 = space();
+    			div59 = element("div");
+    			div55 = element("div");
+    			div55.textContent = "First column";
+    			t137 = space();
+    			div56 = element("div");
+    			div56.textContent = "Second column";
+    			t139 = space();
+    			div57 = element("div");
+    			div57.textContent = "Third column";
+    			t141 = space();
+    			div58 = element("div");
+    			div58.textContent = "Fourth column";
+    			t143 = space();
+    			h112 = element("h1");
+    			h112.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t147 = space();
+    			div64 = element("div");
+    			div60 = element("div");
+    			div60.textContent = "First column";
+    			t149 = space();
+    			div61 = element("div");
+    			div61.textContent = "Second column";
+    			t151 = space();
+    			div62 = element("div");
+    			div62.textContent = "Third column";
+    			t153 = space();
+    			div63 = element("div");
+    			div63.textContent = "Fourth column";
+    			t155 = space();
+    			h113 = element("h1");
+    			h113.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t159 = space();
+    			div69 = element("div");
+    			div65 = element("div");
+    			div65.textContent = "First column";
+    			t161 = space();
+    			div66 = element("div");
+    			div66.textContent = "Second column";
+    			t163 = space();
+    			div67 = element("div");
+    			div67.textContent = "Third column";
+    			t165 = space();
+    			div68 = element("div");
+    			div68.textContent = "Fourth column";
+    			t167 = space();
+    			h114 = element("h1");
+    			h114.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t171 = space();
+    			div74 = element("div");
+    			div70 = element("div");
+    			div70.textContent = "First column";
+    			t173 = space();
+    			div71 = element("div");
+    			div71.textContent = "Second column";
+    			t175 = space();
+    			div72 = element("div");
+    			div72.textContent = "Third column";
+    			t177 = space();
+    			div73 = element("div");
+    			div73.textContent = "Fourth column";
+    			t179 = space();
+    			h115 = element("h1");
+    			h115.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t183 = space();
+    			div79 = element("div");
+    			div75 = element("div");
+    			div75.textContent = "First column";
+    			t185 = space();
+    			div76 = element("div");
+    			div76.textContent = "Second column";
+    			t187 = space();
+    			div77 = element("div");
+    			div77.textContent = "Third column";
+    			t189 = space();
+    			div78 = element("div");
+    			div78.textContent = "Fourth column";
+    			t191 = space();
+    			h116 = element("h1");
+    			h116.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t195 = space();
+    			div84 = element("div");
+    			div80 = element("div");
+    			div80.textContent = "First column";
+    			t197 = space();
+    			div81 = element("div");
+    			div81.textContent = "Second column";
+    			t199 = space();
+    			div82 = element("div");
+    			div82.textContent = "Third column";
+    			t201 = space();
+    			div83 = element("div");
+    			div83.textContent = "Fourth column";
+    			t203 = space();
+    			h117 = element("h1");
+    			h117.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t207 = space();
+    			div89 = element("div");
+    			div85 = element("div");
+    			div85.textContent = "First column";
+    			t209 = space();
+    			div86 = element("div");
+    			div86.textContent = "Second column";
+    			t211 = space();
+    			div87 = element("div");
+    			div87.textContent = "Third column";
+    			t213 = space();
+    			div88 = element("div");
+    			div88.textContent = "Fourth column";
+    			t215 = space();
+    			h118 = element("h1");
+    			h118.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t219 = space();
+    			div94 = element("div");
+    			div90 = element("div");
+    			div90.textContent = "First column";
+    			t221 = space();
+    			div91 = element("div");
+    			div91.textContent = "Second column";
+    			t223 = space();
+    			div92 = element("div");
+    			div92.textContent = "Third column";
+    			t225 = space();
+    			div93 = element("div");
+    			div93.textContent = "Fourth column";
+    			t227 = space();
+    			h119 = element("h1");
+    			h119.textContent = `Welcome to ${/*name*/ ctx[0]}'s world!`;
+    			t231 = space();
+    			div99 = element("div");
+    			div95 = element("div");
+    			div95.textContent = "First column";
+    			t233 = space();
+    			div96 = element("div");
+    			div96.textContent = "Second column";
+    			t235 = space();
+    			div97 = element("div");
+    			div97.textContent = "Third column";
+    			t237 = space();
+    			div98 = element("div");
+    			div98.textContent = "Fourth column";
+    			add_location(h10, file$2, 7, 1, 67);
+    			attr_dev(div0, "class", "column");
+    			add_location(div0, file$2, 9, 8, 136);
+    			attr_dev(div1, "class", "column");
+    			add_location(div1, file$2, 12, 2, 196);
+    			attr_dev(div2, "class", "column");
+    			add_location(div2, file$2, 15, 2, 257);
+    			attr_dev(div3, "class", "column");
+    			add_location(div3, file$2, 18, 2, 317);
+    			attr_dev(div4, "class", "columns");
+    			add_location(div4, file$2, 8, 1, 105);
+    			add_location(h11, file$2, 22, 1, 386);
+    			attr_dev(div5, "class", "column");
+    			add_location(div5, file$2, 24, 8, 455);
+    			attr_dev(div6, "class", "column");
+    			add_location(div6, file$2, 27, 2, 515);
+    			attr_dev(div7, "class", "column");
+    			add_location(div7, file$2, 30, 2, 576);
+    			attr_dev(div8, "class", "column");
+    			add_location(div8, file$2, 33, 2, 636);
+    			attr_dev(div9, "class", "columns");
+    			add_location(div9, file$2, 23, 1, 424);
+    			add_location(h12, file$2, 37, 1, 705);
+    			attr_dev(div10, "class", "column");
+    			add_location(div10, file$2, 39, 8, 774);
+    			attr_dev(div11, "class", "column");
+    			add_location(div11, file$2, 42, 2, 834);
+    			attr_dev(div12, "class", "column");
+    			add_location(div12, file$2, 45, 2, 895);
+    			attr_dev(div13, "class", "column");
+    			add_location(div13, file$2, 48, 2, 955);
+    			attr_dev(div14, "class", "columns");
+    			add_location(div14, file$2, 38, 1, 743);
+    			add_location(h13, file$2, 52, 1, 1024);
+    			attr_dev(div15, "class", "column");
+    			add_location(div15, file$2, 54, 8, 1093);
+    			attr_dev(div16, "class", "column");
+    			add_location(div16, file$2, 57, 2, 1153);
+    			attr_dev(div17, "class", "column");
+    			add_location(div17, file$2, 60, 2, 1214);
+    			attr_dev(div18, "class", "column");
+    			add_location(div18, file$2, 63, 2, 1274);
+    			attr_dev(div19, "class", "columns");
+    			add_location(div19, file$2, 53, 1, 1062);
+    			add_location(h14, file$2, 67, 1, 1343);
+    			attr_dev(div20, "class", "column");
+    			add_location(div20, file$2, 69, 8, 1412);
+    			attr_dev(div21, "class", "column");
+    			add_location(div21, file$2, 72, 2, 1472);
+    			attr_dev(div22, "class", "column");
+    			add_location(div22, file$2, 75, 2, 1533);
+    			attr_dev(div23, "class", "column");
+    			add_location(div23, file$2, 78, 2, 1593);
+    			attr_dev(div24, "class", "columns");
+    			add_location(div24, file$2, 68, 1, 1381);
+    			add_location(h15, file$2, 82, 1, 1662);
+    			attr_dev(div25, "class", "column");
+    			add_location(div25, file$2, 84, 8, 1731);
+    			attr_dev(div26, "class", "column");
+    			add_location(div26, file$2, 87, 2, 1791);
+    			attr_dev(div27, "class", "column");
+    			add_location(div27, file$2, 90, 2, 1852);
+    			attr_dev(div28, "class", "column");
+    			add_location(div28, file$2, 93, 2, 1912);
+    			attr_dev(div29, "class", "columns");
+    			add_location(div29, file$2, 83, 1, 1700);
+    			add_location(h16, file$2, 97, 1, 1981);
+    			attr_dev(div30, "class", "column");
+    			add_location(div30, file$2, 99, 8, 2050);
+    			attr_dev(div31, "class", "column");
+    			add_location(div31, file$2, 102, 2, 2110);
+    			attr_dev(div32, "class", "column");
+    			add_location(div32, file$2, 105, 2, 2171);
+    			attr_dev(div33, "class", "column");
+    			add_location(div33, file$2, 108, 2, 2231);
+    			attr_dev(div34, "class", "columns");
+    			add_location(div34, file$2, 98, 1, 2019);
+    			add_location(h17, file$2, 112, 1, 2300);
+    			attr_dev(div35, "class", "column");
+    			add_location(div35, file$2, 114, 8, 2369);
+    			attr_dev(div36, "class", "column");
+    			add_location(div36, file$2, 117, 2, 2429);
+    			attr_dev(div37, "class", "column");
+    			add_location(div37, file$2, 120, 2, 2490);
+    			attr_dev(div38, "class", "column");
+    			add_location(div38, file$2, 123, 2, 2550);
+    			attr_dev(div39, "class", "columns");
+    			add_location(div39, file$2, 113, 1, 2338);
+    			add_location(h18, file$2, 127, 1, 2619);
+    			attr_dev(div40, "class", "column");
+    			add_location(div40, file$2, 129, 8, 2688);
+    			attr_dev(div41, "class", "column");
+    			add_location(div41, file$2, 132, 2, 2748);
+    			attr_dev(div42, "class", "column");
+    			add_location(div42, file$2, 135, 2, 2809);
+    			attr_dev(div43, "class", "column");
+    			add_location(div43, file$2, 138, 2, 2869);
+    			attr_dev(div44, "class", "columns");
+    			add_location(div44, file$2, 128, 1, 2657);
+    			add_location(h19, file$2, 142, 1, 2938);
+    			attr_dev(div45, "class", "column");
+    			add_location(div45, file$2, 144, 8, 3007);
+    			attr_dev(div46, "class", "column");
+    			add_location(div46, file$2, 147, 2, 3067);
+    			attr_dev(div47, "class", "column");
+    			add_location(div47, file$2, 150, 2, 3128);
+    			attr_dev(div48, "class", "column");
+    			add_location(div48, file$2, 153, 2, 3188);
+    			attr_dev(div49, "class", "columns");
+    			add_location(div49, file$2, 143, 1, 2976);
+    			add_location(h110, file$2, 157, 1, 3257);
+    			attr_dev(div50, "class", "column");
+    			add_location(div50, file$2, 159, 8, 3326);
+    			attr_dev(div51, "class", "column");
+    			add_location(div51, file$2, 162, 2, 3386);
+    			attr_dev(div52, "class", "column");
+    			add_location(div52, file$2, 165, 2, 3447);
+    			attr_dev(div53, "class", "column");
+    			add_location(div53, file$2, 168, 2, 3507);
+    			attr_dev(div54, "class", "columns");
+    			add_location(div54, file$2, 158, 1, 3295);
+    			add_location(h111, file$2, 172, 1, 3576);
+    			attr_dev(div55, "class", "column");
+    			add_location(div55, file$2, 174, 8, 3645);
+    			attr_dev(div56, "class", "column");
+    			add_location(div56, file$2, 177, 2, 3705);
+    			attr_dev(div57, "class", "column");
+    			add_location(div57, file$2, 180, 2, 3766);
+    			attr_dev(div58, "class", "column");
+    			add_location(div58, file$2, 183, 2, 3826);
+    			attr_dev(div59, "class", "columns");
+    			add_location(div59, file$2, 173, 1, 3614);
+    			add_location(h112, file$2, 187, 1, 3895);
+    			attr_dev(div60, "class", "column");
+    			add_location(div60, file$2, 189, 8, 3964);
+    			attr_dev(div61, "class", "column");
+    			add_location(div61, file$2, 192, 2, 4024);
+    			attr_dev(div62, "class", "column");
+    			add_location(div62, file$2, 195, 2, 4085);
+    			attr_dev(div63, "class", "column");
+    			add_location(div63, file$2, 198, 2, 4145);
+    			attr_dev(div64, "class", "columns");
+    			add_location(div64, file$2, 188, 1, 3933);
+    			add_location(h113, file$2, 202, 1, 4214);
+    			attr_dev(div65, "class", "column");
+    			add_location(div65, file$2, 204, 8, 4283);
+    			attr_dev(div66, "class", "column");
+    			add_location(div66, file$2, 207, 2, 4343);
+    			attr_dev(div67, "class", "column");
+    			add_location(div67, file$2, 210, 2, 4404);
+    			attr_dev(div68, "class", "column");
+    			add_location(div68, file$2, 213, 2, 4464);
+    			attr_dev(div69, "class", "columns");
+    			add_location(div69, file$2, 203, 1, 4252);
+    			add_location(h114, file$2, 217, 1, 4533);
+    			attr_dev(div70, "class", "column");
+    			add_location(div70, file$2, 219, 8, 4602);
+    			attr_dev(div71, "class", "column");
+    			add_location(div71, file$2, 222, 2, 4662);
+    			attr_dev(div72, "class", "column");
+    			add_location(div72, file$2, 225, 2, 4723);
+    			attr_dev(div73, "class", "column");
+    			add_location(div73, file$2, 228, 2, 4783);
+    			attr_dev(div74, "class", "columns");
+    			add_location(div74, file$2, 218, 1, 4571);
+    			add_location(h115, file$2, 232, 1, 4852);
+    			attr_dev(div75, "class", "column");
+    			add_location(div75, file$2, 234, 8, 4921);
+    			attr_dev(div76, "class", "column");
+    			add_location(div76, file$2, 237, 2, 4981);
+    			attr_dev(div77, "class", "column");
+    			add_location(div77, file$2, 240, 2, 5042);
+    			attr_dev(div78, "class", "column");
+    			add_location(div78, file$2, 243, 2, 5102);
+    			attr_dev(div79, "class", "columns");
+    			add_location(div79, file$2, 233, 1, 4890);
+    			add_location(h116, file$2, 247, 1, 5171);
+    			attr_dev(div80, "class", "column");
+    			add_location(div80, file$2, 249, 8, 5240);
+    			attr_dev(div81, "class", "column");
+    			add_location(div81, file$2, 252, 2, 5300);
+    			attr_dev(div82, "class", "column");
+    			add_location(div82, file$2, 255, 2, 5361);
+    			attr_dev(div83, "class", "column");
+    			add_location(div83, file$2, 258, 2, 5421);
+    			attr_dev(div84, "class", "columns");
+    			add_location(div84, file$2, 248, 1, 5209);
+    			add_location(h117, file$2, 262, 1, 5490);
+    			attr_dev(div85, "class", "column");
+    			add_location(div85, file$2, 264, 8, 5559);
+    			attr_dev(div86, "class", "column");
+    			add_location(div86, file$2, 267, 2, 5619);
+    			attr_dev(div87, "class", "column");
+    			add_location(div87, file$2, 270, 2, 5680);
+    			attr_dev(div88, "class", "column");
+    			add_location(div88, file$2, 273, 2, 5740);
+    			attr_dev(div89, "class", "columns");
+    			add_location(div89, file$2, 263, 1, 5528);
+    			add_location(h118, file$2, 277, 1, 5809);
+    			attr_dev(div90, "class", "column");
+    			add_location(div90, file$2, 279, 8, 5878);
+    			attr_dev(div91, "class", "column");
+    			add_location(div91, file$2, 282, 2, 5938);
+    			attr_dev(div92, "class", "column");
+    			add_location(div92, file$2, 285, 2, 5999);
+    			attr_dev(div93, "class", "column");
+    			add_location(div93, file$2, 288, 2, 6059);
+    			attr_dev(div94, "class", "columns");
+    			add_location(div94, file$2, 278, 1, 5847);
+    			add_location(h119, file$2, 292, 1, 6128);
+    			attr_dev(div95, "class", "column");
+    			add_location(div95, file$2, 294, 8, 6197);
+    			attr_dev(div96, "class", "column");
+    			add_location(div96, file$2, 297, 2, 6257);
+    			attr_dev(div97, "class", "column");
+    			add_location(div97, file$2, 300, 2, 6318);
+    			attr_dev(div98, "class", "column");
+    			add_location(div98, file$2, 303, 2, 6378);
+    			attr_dev(div99, "class", "columns");
+    			add_location(div99, file$2, 293, 1, 6166);
+    			add_location(div100, file$2, 5, 0, 53);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div100, anchor);
+    			append_dev(div100, h10);
+    			append_dev(div100, t3);
+    			append_dev(div100, div4);
+    			append_dev(div4, div0);
+    			append_dev(div4, t5);
+    			append_dev(div4, div1);
+    			append_dev(div4, t7);
+    			append_dev(div4, div2);
+    			append_dev(div4, t9);
+    			append_dev(div4, div3);
+    			append_dev(div100, t11);
+    			append_dev(div100, h11);
+    			append_dev(div100, t15);
+    			append_dev(div100, div9);
+    			append_dev(div9, div5);
+    			append_dev(div9, t17);
+    			append_dev(div9, div6);
+    			append_dev(div9, t19);
+    			append_dev(div9, div7);
+    			append_dev(div9, t21);
+    			append_dev(div9, div8);
+    			append_dev(div100, t23);
+    			append_dev(div100, h12);
+    			append_dev(div100, t27);
+    			append_dev(div100, div14);
+    			append_dev(div14, div10);
+    			append_dev(div14, t29);
+    			append_dev(div14, div11);
+    			append_dev(div14, t31);
+    			append_dev(div14, div12);
+    			append_dev(div14, t33);
+    			append_dev(div14, div13);
+    			append_dev(div100, t35);
+    			append_dev(div100, h13);
+    			append_dev(div100, t39);
+    			append_dev(div100, div19);
+    			append_dev(div19, div15);
+    			append_dev(div19, t41);
+    			append_dev(div19, div16);
+    			append_dev(div19, t43);
+    			append_dev(div19, div17);
+    			append_dev(div19, t45);
+    			append_dev(div19, div18);
+    			append_dev(div100, t47);
+    			append_dev(div100, h14);
+    			append_dev(div100, t51);
+    			append_dev(div100, div24);
+    			append_dev(div24, div20);
+    			append_dev(div24, t53);
+    			append_dev(div24, div21);
+    			append_dev(div24, t55);
+    			append_dev(div24, div22);
+    			append_dev(div24, t57);
+    			append_dev(div24, div23);
+    			append_dev(div100, t59);
+    			append_dev(div100, h15);
+    			append_dev(div100, t63);
+    			append_dev(div100, div29);
+    			append_dev(div29, div25);
+    			append_dev(div29, t65);
+    			append_dev(div29, div26);
+    			append_dev(div29, t67);
+    			append_dev(div29, div27);
+    			append_dev(div29, t69);
+    			append_dev(div29, div28);
+    			append_dev(div100, t71);
+    			append_dev(div100, h16);
+    			append_dev(div100, t75);
+    			append_dev(div100, div34);
+    			append_dev(div34, div30);
+    			append_dev(div34, t77);
+    			append_dev(div34, div31);
+    			append_dev(div34, t79);
+    			append_dev(div34, div32);
+    			append_dev(div34, t81);
+    			append_dev(div34, div33);
+    			append_dev(div100, t83);
+    			append_dev(div100, h17);
+    			append_dev(div100, t87);
+    			append_dev(div100, div39);
+    			append_dev(div39, div35);
+    			append_dev(div39, t89);
+    			append_dev(div39, div36);
+    			append_dev(div39, t91);
+    			append_dev(div39, div37);
+    			append_dev(div39, t93);
+    			append_dev(div39, div38);
+    			append_dev(div100, t95);
+    			append_dev(div100, h18);
+    			append_dev(div100, t99);
+    			append_dev(div100, div44);
+    			append_dev(div44, div40);
+    			append_dev(div44, t101);
+    			append_dev(div44, div41);
+    			append_dev(div44, t103);
+    			append_dev(div44, div42);
+    			append_dev(div44, t105);
+    			append_dev(div44, div43);
+    			append_dev(div100, t107);
+    			append_dev(div100, h19);
+    			append_dev(div100, t111);
+    			append_dev(div100, div49);
+    			append_dev(div49, div45);
+    			append_dev(div49, t113);
+    			append_dev(div49, div46);
+    			append_dev(div49, t115);
+    			append_dev(div49, div47);
+    			append_dev(div49, t117);
+    			append_dev(div49, div48);
+    			append_dev(div100, t119);
+    			append_dev(div100, h110);
+    			append_dev(div100, t123);
+    			append_dev(div100, div54);
+    			append_dev(div54, div50);
+    			append_dev(div54, t125);
+    			append_dev(div54, div51);
+    			append_dev(div54, t127);
+    			append_dev(div54, div52);
+    			append_dev(div54, t129);
+    			append_dev(div54, div53);
+    			append_dev(div100, t131);
+    			append_dev(div100, h111);
+    			append_dev(div100, t135);
+    			append_dev(div100, div59);
+    			append_dev(div59, div55);
+    			append_dev(div59, t137);
+    			append_dev(div59, div56);
+    			append_dev(div59, t139);
+    			append_dev(div59, div57);
+    			append_dev(div59, t141);
+    			append_dev(div59, div58);
+    			append_dev(div100, t143);
+    			append_dev(div100, h112);
+    			append_dev(div100, t147);
+    			append_dev(div100, div64);
+    			append_dev(div64, div60);
+    			append_dev(div64, t149);
+    			append_dev(div64, div61);
+    			append_dev(div64, t151);
+    			append_dev(div64, div62);
+    			append_dev(div64, t153);
+    			append_dev(div64, div63);
+    			append_dev(div100, t155);
+    			append_dev(div100, h113);
+    			append_dev(div100, t159);
+    			append_dev(div100, div69);
+    			append_dev(div69, div65);
+    			append_dev(div69, t161);
+    			append_dev(div69, div66);
+    			append_dev(div69, t163);
+    			append_dev(div69, div67);
+    			append_dev(div69, t165);
+    			append_dev(div69, div68);
+    			append_dev(div100, t167);
+    			append_dev(div100, h114);
+    			append_dev(div100, t171);
+    			append_dev(div100, div74);
+    			append_dev(div74, div70);
+    			append_dev(div74, t173);
+    			append_dev(div74, div71);
+    			append_dev(div74, t175);
+    			append_dev(div74, div72);
+    			append_dev(div74, t177);
+    			append_dev(div74, div73);
+    			append_dev(div100, t179);
+    			append_dev(div100, h115);
+    			append_dev(div100, t183);
+    			append_dev(div100, div79);
+    			append_dev(div79, div75);
+    			append_dev(div79, t185);
+    			append_dev(div79, div76);
+    			append_dev(div79, t187);
+    			append_dev(div79, div77);
+    			append_dev(div79, t189);
+    			append_dev(div79, div78);
+    			append_dev(div100, t191);
+    			append_dev(div100, h116);
+    			append_dev(div100, t195);
+    			append_dev(div100, div84);
+    			append_dev(div84, div80);
+    			append_dev(div84, t197);
+    			append_dev(div84, div81);
+    			append_dev(div84, t199);
+    			append_dev(div84, div82);
+    			append_dev(div84, t201);
+    			append_dev(div84, div83);
+    			append_dev(div100, t203);
+    			append_dev(div100, h117);
+    			append_dev(div100, t207);
+    			append_dev(div100, div89);
+    			append_dev(div89, div85);
+    			append_dev(div89, t209);
+    			append_dev(div89, div86);
+    			append_dev(div89, t211);
+    			append_dev(div89, div87);
+    			append_dev(div89, t213);
+    			append_dev(div89, div88);
+    			append_dev(div100, t215);
+    			append_dev(div100, h118);
+    			append_dev(div100, t219);
+    			append_dev(div100, div94);
+    			append_dev(div94, div90);
+    			append_dev(div94, t221);
+    			append_dev(div94, div91);
+    			append_dev(div94, t223);
+    			append_dev(div94, div92);
+    			append_dev(div94, t225);
+    			append_dev(div94, div93);
+    			append_dev(div100, t227);
+    			append_dev(div100, h119);
+    			append_dev(div100, t231);
+    			append_dev(div100, div99);
+    			append_dev(div99, div95);
+    			append_dev(div99, t233);
+    			append_dev(div99, div96);
+    			append_dev(div99, t235);
+    			append_dev(div99, div97);
+    			append_dev(div99, t237);
+    			append_dev(div99, div98);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div100);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$3.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Home', slots, []);
+    	let name = 'coding-orca';
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Home> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ name });
+
+    	$$self.$inject_state = $$props => {
+    		if ('name' in $$props) $$invalidate(0, name = $$props.name);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [name];
+    }
+
+    class Home extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Home",
+    			options,
+    			id: create_fragment$3.name
+    		});
+    	}
+    }
+
+    /* src\routes\About.svelte generated by Svelte v3.48.0 */
+
+    const file$1 = "src\\routes\\About.svelte";
+
+    function create_fragment$2(ctx) {
+    	let div;
+    	let h1;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			h1 = element("h1");
+    			h1.textContent = `Welcome to ${/*name*/ ctx[0]}'s ABOUT!`;
+    			add_location(h1, file$1, 6, 1, 65);
+    			add_location(div, file$1, 4, 0, 51);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h1);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$2.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$2($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('About', slots, []);
+    	let name = 'coding-orca';
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<About> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ name });
+
+    	$$self.$inject_state = $$props => {
+    		if ('name' in $$props) $$invalidate(0, name = $$props.name);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [name];
+    }
+
+    class About extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "About",
+    			options,
+    			id: create_fragment$2.name
+    		});
+    	}
+    }
+
+    var routes = {
+      '/': Home,
+      '/about': About
+    };
+
+    /* src\components\Header.svelte generated by Svelte v3.48.0 */
+    const file = "src\\components\\Header.svelte";
+
+    function create_fragment$1(ctx) {
+    	let nav;
+    	let div6;
+    	let div3;
+    	let div1;
+    	let div0;
+    	let a0;
+    	let t1;
+    	let div2;
+    	let span0;
+    	let t2;
+    	let span1;
+    	let t3;
+    	let span2;
+    	let t4;
+    	let div5;
+    	let div4;
+    	let a1;
+    	let t6;
+    	let a2;
+    	let t8;
+    	let hr;
+    	let t9;
+    	let section;
+    	let figure;
+    	let img;
+    	let img_src_value;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			nav = element("nav");
+    			div6 = element("div");
+    			div3 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			a0 = element("a");
+    			a0.textContent = "Coding Orca's Cave";
+    			t1 = space();
+    			div2 = element("div");
+    			span0 = element("span");
+    			t2 = space();
+    			span1 = element("span");
+    			t3 = space();
+    			span2 = element("span");
+    			t4 = space();
+    			div5 = element("div");
+    			div4 = element("div");
+    			a1 = element("a");
+    			a1.textContent = "Home";
+    			t6 = space();
+    			a2 = element("a");
+    			a2.textContent = "About";
+    			t8 = space();
+    			hr = element("hr");
+    			t9 = space();
+    			section = element("section");
+    			figure = element("figure");
+    			img = element("img");
+    			attr_dev(a0, "class", "brand-text has-text-white m-3");
+    			attr_dev(a0, "href", "/");
+    			add_location(a0, file, 12, 20, 325);
+    			attr_dev(div0, "class", "has-background-grey");
+    			add_location(div0, file, 11, 16, 270);
+    			attr_dev(div1, "class", "navbar-item");
+    			add_location(div1, file, 10, 12, 227);
+    			add_location(span0, file, 20, 16, 660);
+    			add_location(span1, file, 21, 16, 691);
+    			add_location(span2, file, 22, 16, 722);
+    			attr_dev(div2, "class", "navbar-burger burger");
+    			toggle_class(div2, "is-active", /*isActive*/ ctx[0]);
+    			add_location(div2, file, 17, 12, 508);
+    			attr_dev(div3, "class", "navbar-brand");
+    			add_location(div3, file, 9, 8, 187);
+    			attr_dev(a1, "class", "navbar-item");
+    			attr_dev(a1, "href", "/");
+    			add_location(a1, file, 27, 16, 904);
+    			attr_dev(a2, "class", "navbar-item");
+    			attr_dev(a2, "href", "/about");
+    			add_location(a2, file, 28, 16, 971);
+    			attr_dev(div4, "class", "navbar-start");
+    			add_location(div4, file, 26, 12, 860);
+    			attr_dev(div5, "id", "navMenu");
+    			attr_dev(div5, "class", "navbar-menu");
+    			toggle_class(div5, "is-active", /*isActive*/ ctx[0]);
+    			add_location(div5, file, 25, 8, 781);
+    			attr_dev(div6, "class", "container");
+    			add_location(div6, file, 8, 4, 154);
+    			attr_dev(nav, "class", "navbar is-white is-fixed-top");
+    			add_location(nav, file, 7, 0, 106);
+    			add_location(hr, file, 33, 0, 1084);
+    			if (!src_url_equal(img.src, img_src_value = "/images/swimmingOrca1.gif")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "banner");
+    			add_location(img, file, 36, 8, 1183);
+    			attr_dev(figure, "class", "image is-3by1");
+    			add_location(figure, file, 35, 4, 1143);
+    			attr_dev(section, "class", "hero is-medium ml-4 mr-4 mb-3");
+    			add_location(section, file, 34, 0, 1090);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, nav, anchor);
+    			append_dev(nav, div6);
+    			append_dev(div6, div3);
+    			append_dev(div3, div1);
+    			append_dev(div1, div0);
+    			append_dev(div0, a0);
+    			append_dev(div3, t1);
+    			append_dev(div3, div2);
+    			append_dev(div2, span0);
+    			append_dev(div2, t2);
+    			append_dev(div2, span1);
+    			append_dev(div2, t3);
+    			append_dev(div2, span2);
+    			append_dev(div6, t4);
+    			append_dev(div6, div5);
+    			append_dev(div5, div4);
+    			append_dev(div4, a1);
+    			append_dev(div4, t6);
+    			append_dev(div4, a2);
+    			insert_dev(target, t8, anchor);
+    			insert_dev(target, hr, anchor);
+    			insert_dev(target, t9, anchor);
+    			insert_dev(target, section, anchor);
+    			append_dev(section, figure);
+    			append_dev(figure, img);
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(link.call(null, a0)),
+    					listen_dev(div2, "click", /*click_handler*/ ctx[1], false, false, false),
+    					action_destroyer(link.call(null, a1)),
+    					action_destroyer(link.call(null, a2))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*isActive*/ 1) {
+    				toggle_class(div2, "is-active", /*isActive*/ ctx[0]);
+    			}
+
+    			if (dirty & /*isActive*/ 1) {
+    				toggle_class(div5, "is-active", /*isActive*/ ctx[0]);
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(nav);
+    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(hr);
+    			if (detaching) detach_dev(t9);
+    			if (detaching) detach_dev(section);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$1.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$1($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Header', slots, []);
+    	let isActive = false;
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Header> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = () => {
+    		$$invalidate(0, isActive = !isActive);
+    	};
+
+    	$$self.$capture_state = () => ({ link, isActive });
+
+    	$$self.$inject_state = $$props => {
+    		if ('isActive' in $$props) $$invalidate(0, isActive = $$props.isActive);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [isActive, click_handler];
+    }
+
+    class Header extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Header",
+    			options,
+    			id: create_fragment$1.name
+    		});
+    	}
+    }
+
+    /* src\App.svelte generated by Svelte v3.48.0 */
+
+    function create_fragment(ctx) {
+    	let header;
+    	let t;
+    	let router;
+    	let current;
+    	header = new Header({ $$inline: true });
+    	router = new Router({ props: { routes }, $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(header.$$.fragment);
+    			t = space();
+    			create_component(router.$$.fragment);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(header, target, anchor);
+    			insert_dev(target, t, anchor);
+    			mount_component(router, target, anchor);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(header.$$.fragment, local);
+    			transition_in(router.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(header.$$.fragment, local);
+    			transition_out(router.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(header, detaching);
+    			if (detaching) detach_dev(t);
+    			destroy_component(router, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('App', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ Router, routes, Header });
+    	return [];
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "App",
+    			options,
+    			id: create_fragment.name
+    		});
+    	}
+    }
+
+    var app = new App({
+    	target: document.body
+    });
+
+    return app;
+
+})();
 //# sourceMappingURL=bundle.js.map
