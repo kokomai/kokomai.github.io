@@ -1,0 +1,111 @@
+.va {
+  display: flex;
+  align-items: center;
+}
+
+.hero,
+.cta {
+  background: rgba(114, 112, 112, 0.9)
+}
+
+.cta {
+  height: 500px;
+  border-top: 10px solid turquoise;
+}
+
+footer {
+  color: white;
+  background: rgb(14, 14, 14) !important;
+}
+
+footer strong {
+  color: turquoise;
+}
+
+footer a {
+  color: turquoise;
+}
+
+.title {
+  color: white;
+  font-weight: 800;
+  font-size: 4rem;
+  font-family: 'Nunito Sans', sans-serif;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px rgb(0, 0, 3);
+}
+
+.subtitle {
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px rgb(0, 0, 3);
+}
+
+hr.content-divider {
+  max-width: 75px;
+  height: 5px;
+}
+
+#parallax-1 {
+  
+  position:relative;
+  z-index:1;
+}
+
+#parallax-1::after {
+  background: url(../images/swimmingOrca2.gif);
+  background-color: rgba(255,255,255,0.1);
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  opacity: 0.2 !important;
+  filter: alpha(opacity=50);
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+#parallax-1 hr {
+  background: rgb(65, 201, 255);
+}
+
+#parallax-2 {
+  background: url(../images/swimmingOrca1.gif);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#parallax-2 hr {
+  background: yellow;
+}
+
+#parallax-3 {
+  background: url(https://source.unsplash.com/featured/?city);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 10px solid hotpink;
+}
+
+#parallax-3 hr {
+  background: hotpink;
+}
+
+.label {
+  color: white;
+}
+
+input {
+  background: transparent !important;
+  border: 1px solid turquoise !important;
+  color: white !important;
+}
+
+input::placeholder {
+  color: white !important;
+}
