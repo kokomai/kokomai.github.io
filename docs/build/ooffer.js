@@ -181,6 +181,7 @@ const OOFFER = {
             OOFFER.checkScore();
         }, 1000);
         window.addEventListener("scroll", OOFFER.scrolling);
+        window.addEventListener("touchmove", OOFFER.scrolling);
         
         // https://codepen.io/imprakash/pen/GgNMXO
     }
