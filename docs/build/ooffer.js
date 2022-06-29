@@ -187,6 +187,5 @@ const OOFFER = {
     }
 }
 
-window.addEventListener("load", function() {
+
     OOFFER.set();
-});
