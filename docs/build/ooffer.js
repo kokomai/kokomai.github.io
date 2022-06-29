@@ -8,9 +8,8 @@
 
 // ads list img : image location / link : link to move
 const __oofferAdsList = [
-    {img: '/test1.gif', link: 'https://github.com/kokomai', contents: "coding-orca want you!"},
-    {img: '/test2.gif', link: 'https://github.com/kokomai?tab=repositories', contents: "hello! I'm coding-orca"},
-    {img: '/test3.jpg', link: 'https://github.com/kokomai/ooffer', contents: "hello! this is ooffer !"},
+    {img: '../images/swimmingOrca1.gif', link: 'https://github.com/kokomai', contents: "coding-orca want you!"},
+    {img: '../images/swimmingOrca2.gif', link: 'https://github.com/kokomai?tab=repositories', contents: "hello! I'm coding-orca"},
 ]
 /**
  * options
