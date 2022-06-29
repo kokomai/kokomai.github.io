@@ -8,8 +8,9 @@
 
 // ads list img : image location / link : link to move
 const __oofferAdsList = [
-    {img: '../images/swimmingOrca1.gif', link: 'https://github.com/kokomai', contents: "coding-orca want you!"},
-    {img: '../images/swimmingOrca2.gif', link: 'https://github.com/kokomai?tab=repositories', contents: "hello! I'm coding-orca"},
+    {img: '/test1.gif', link: 'https://github.com/kokomai', contents: "coding-orca want you!"},
+    {img: '/test2.gif', link: 'https://github.com/kokomai?tab=repositories', contents: "hello! I'm coding-orca"},
+    {img: '/test3.jpg', link: 'https://github.com/kokomai/ooffer', contents: "hello! this is ooffer !"},
 ]
 /**
  * options
@@ -154,7 +155,7 @@ const OOFFER = {
                     + "'>"
                     + __oofferOptions.title
                     + "</h2>"
-                    + "<a class='close' href='#' onclick='OOFFER.close();' style='"
+                    + "<a class='close' href='javascript:void(0);' onclick='OOFFER.close();' style='"
                     + __oofferOptions.closeCss
                     +"'>&times;</a>"
                     + "<div class='content' style='"
@@ -180,12 +181,11 @@ const OOFFER = {
             console.log(OOFFER.score);
             OOFFER.checkScore();
         }, 1000);
-        document.addEventListener("scroll", OOFFER.scrolling);
-        document.addEventListener("touchmove", OOFFER.scrolling);
+        window.addEventListener("scroll", OOFFER.scrolling);
         
         // https://codepen.io/imprakash/pen/GgNMXO
     }
 }
 
 
-    OOFFER.set();
+OOFFER.set();
