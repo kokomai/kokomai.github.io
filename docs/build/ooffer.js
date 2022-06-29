@@ -180,8 +180,8 @@ const OOFFER = {
             console.log(OOFFER.score);
             OOFFER.checkScore();
         }, 1000);
-        window.addEventListener("scroll", OOFFER.scrolling);
-        window.addEventListener("touchmove", OOFFER.scrolling);
+        document.addEventListener("scroll", OOFFER.scrolling);
+        document.addEventListener("touchmove", OOFFER.scrolling);
         
         // https://codepen.io/imprakash/pen/GgNMXO
     }
