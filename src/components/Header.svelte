@@ -5,6 +5,7 @@
     let navItems = [
         { label: "Home", href: "/", active: true },
         { label: "About", href: "/about", active: false },
+        // { label: "Console", href: "/console", active: false }
     ]
     
     function checkNowPage() {
