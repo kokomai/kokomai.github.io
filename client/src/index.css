@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v15/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Beautiful wedding font */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtPK-F2qC1s.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 47 100% 50%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 47 100% 50%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    @apply font-sans antialiased bg-background text-foreground;
+    touch-action: none; /* 스크롤 방지 (특히 모바일에서 중요) */
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    overscroll-behavior: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #root {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .font-pixel {
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .font-korean {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .pixel-art {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+
+  .title-glow {
+    text-shadow: 0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 30px #FF8C00;
+  }
+}
+
+/* Animation classes */
+@layer components {
+  /* 완전한 반응형 폰트 클래스 */
+  .responsive-text-sm {
+    font-size: clamp(0.75rem, 0.7rem + 0.5vw, 0.875rem);
+    line-height: 1.5;
+  }
+
+  .responsive-text-base {
+    font-size: clamp(0.875rem, 0.8rem + 0.7vw, 1rem);
+    line-height: 1.5;
+  }
+
+  .responsive-text-lg {
+    font-size: clamp(1rem, 0.9rem + 0.9vw, 1.125rem);
+    line-height: 1.5;
+  }
+
+  .responsive-text-xl {
+    font-size: clamp(1.125rem, 1rem + 1.2vw, 1.25rem);
+    line-height: 1.4;
+  }
+
+  .responsive-text-2xl {
+    font-size: clamp(1.25rem, 1.1rem + 1.5vw, 1.5rem);
+    line-height: 1.3;
+  }
+
+  .animate-run {
+    animation: sprite-animation 0.6s steps(8) infinite;
+  }
+
+  .animate-jump {
+    animation: jump-animation 0.6s ease-out;
+  }
+
+  .animate-ground {
+    animation: ground-scroll 2s linear infinite;
+  }
+
+  .animate-sky {
+    animation: sky-scroll 10s linear infinite;
+  }
+
+  .animate-building {
+    animation: building-scroll 15s linear infinite;
+  }
+
+  @keyframes sprite-animation {
+    from { background-position: 0px; }
+    to { background-position: -320px; }
+  }
+
+  @keyframes jump-animation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-80px); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes ground-scroll {
+    from { background-position: 0 0; }
+    to { background-position: -128px 0; }
+  }
+
+  @keyframes sky-scroll {
+    from { background-position: 0 0; }
+    to { background-position: -600px 0; }
+  }
+
+  @keyframes building-scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+
+  .fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  /* 이미지 캐러셀 애니메이션 */
+  @keyframes carousel-scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.33%); /* 한 세트의 이미지 길이만큼 이동 */
+    }
+  }
+
+  @keyframes carousel-scroll-right {
+    0% {
+      transform: translateX(-33.33%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-carousel-ltr {
+    animation-name: carousel-scroll-left;
+  }
+
+  .animate-carousel-rtl {
+    animation-name: carousel-scroll-right;
+  }
+}

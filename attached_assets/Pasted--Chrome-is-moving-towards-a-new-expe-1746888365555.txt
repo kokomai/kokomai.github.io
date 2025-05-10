@@ -1,0 +1,323 @@
+
+                
+          
+          
+          
+         Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.
+6772-f626ee922ab3a9ab.js:1 Replit version 2f0fe2b3, pid2 version 0.0.1291
+_app-ac4183be881bb7a6.js:13 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+_app-ac4183be881bb7a6.js:13 [LaunchDarkly] LaunchDarkly client initialized
+DataVizMaster:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+framework-1a44336f3ba42ec6.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'battery'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+framework-1a44336f3ba42ec6.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+workspace_iframe.html:32 Unrecognized feature: 'ambient-light-sensor'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'ambient-light-sensor'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html:32 Unrecognized feature: 'battery'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'battery'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'battery'.
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-not-rendered'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'execution-while-not-rendered'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html:32 Unrecognized feature: 'layout-animations'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'layout-animations'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html:32 Unrecognized feature: 'legacy-image-formats'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'legacy-image-formats'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html:32 Unrecognized feature: 'navigation-override'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'navigation-override'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html:32 Unrecognized feature: 'oversized-images'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'oversized-images'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html:32 Unrecognized feature: 'publickey-credentials'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'publickey-credentials'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html:32 Unrecognized feature: 'speaker-selection'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'speaker-selection'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html:32 Unrecognized feature: 'unoptimized-images'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'unoptimized-images'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html:32 Unrecognized feature: 'unsized-media'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'unsized-media'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowfullscreen'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Allow attribute will take precedence over 'allowfullscreen'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar20%3A:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/:66 
+            
+            
+           GET https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2 net::ERR_ABORTED 404 (Not Found)
+fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2:1 
+            
+            
+           Failed to load resource: the server responded with a status of 404 ()
+fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2:1 
+            
+            
+           Failed to load resource: the server responded with a status of 404 ()
+stallwart.build.js:1 stallwart: failed ping 1
+place:1 
+            
+            
+           Failed to load resource: the server responded with a status of 403 ()
+www.google.com/maps/embed/v1/place?key=AIzaSyAGrQT0QvOkOtq0wIyQn9v6aVvGSiODYWs&q=37.558624,126.963829&zoom=16:1 
+            
+            
+           Failed to load resource: the server responded with a status of 403 ()
+framework-1a44336f3ba42ec6.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-1a44336f3ba42ec6.js:1
+(anonymous) @ framework-1a44336f3ba42ec6.js:1
+uD @ framework-1a44336f3ba42ec6.js:1
+uI @ framework-1a44336f3ba42ec6.js:1
+uM @ framework-1a44336f3ba42ec6.js:1
+uS @ framework-1a44336f3ba42ec6.js:1
+C @ framework-1a44336f3ba42ec6.js:1
+z @ framework-1a44336f3ba42ec6.js:1
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/:66 
+            
+            
+           GET https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2 404 (Not Found)
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/:66 
+            
+            
+           GET https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2 net::ERR_ABORTED 404 (Not Found)
+place:1 
+            
+            
+           Failed to load resource: the server responded with a status of 403 ()
+fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2:1 
+            
+            
+           GET https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2 net::ERR_ABORTED 404 (Not Found)
+fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2:1 
+            
+            
+           GET https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2 net::ERR_ABORTED 404 (Not Found)
+ 카카오맵 API 로드 시작...
+ 카카오맵 API 로드 실패: Event {isTrusted: true, type: 'error', target: script#kakao-map-script, currentTarget: script#kakao-map-script, eventPhase: 2, …}
+Mt.forEach.n.<computed> @ eruda.js:2
+script.onerror @ KakaoMapFixed.tsx:67
+script
+loadKakaoMapScript @ KakaoMapFixed.tsx:55
+(anonymous) @ KakaoMapFixed.tsx:105
+commitHookEffectListMount @ chunk-WERSD76P.js:16915
+commitPassiveMountOnFiber @ chunk-WERSD76P.js:18156
+commitPassiveMountEffects_complete @ chunk-WERSD76P.js:18129
+commitPassiveMountEffects_begin @ chunk-WERSD76P.js:18119
+commitPassiveMountEffects @ chunk-WERSD76P.js:18109
+flushPassiveEffectsImpl @ chunk-WERSD76P.js:19490
+flushPassiveEffects @ chunk-WERSD76P.js:19447
+commitRootImpl @ chunk-WERSD76P.js:19416
+commitRoot @ chunk-WERSD76P.js:19277
+performSyncWorkOnRoot @ chunk-WERSD76P.js:18895
+flushSyncCallbacks @ chunk-WERSD76P.js:9119
+flushSync @ chunk-WERSD76P.js:18959
+scheduleRefresh @ chunk-WERSD76P.js:20004
+(anonymous) @ @react-refresh:188
+performReactRefresh @ @react-refresh:180
+(anonymous) @ @react-refresh:474
+setTimeout
+(anonymous) @ @react-refresh:465
+validateRefreshBoundaryAndEnqueueUpdate @ @react-refresh:512
+(anonymous) @ 9d0d366e-7fd7-4f03-8…=1746888302440:1081
+(anonymous) @ client:34
+(anonymous) @ client:218
+(anonymous) @ client:193
+queueUpdate @ client:193
+await in queueUpdate
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/:66 
+            
+            
+           GET https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff2 net::ERR_ABORTED 404 (Not Found)
+Console.js:61 카카오맵 API 로드 시작...
+Console.js:61 카카오맵 API 로드 실패: Event {isTrusted: true, type: 'error', target: script#kakao-map-script, currentTarget: script#kakao-map-script, eventPhase: 2, …}isTrusted: truebubbles: falsecancelBubble: falsecancelable: falsecomposed: falsecurrentTarget: nulldefaultPrevented: falseeventPhase: 0returnValue: truesrcElement: script#kakao-map-scriptaccessKey: ""ariaActiveDescendantElement: nullariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColIndexText: nullariaColSpan: nullariaControlsElements: nullariaCurrent: nullariaDescribedByElements: nullariaDescription: nullariaDetailsElements: nullariaDisabled: nullariaErrorMessageElements: nullariaExpanded: nullariaFlowToElements: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLabelledByElements: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowIndexText: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullasync: trueattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: id, 1: type, 2: src, 3: async, id: id, type: type, src: src, async: async, length: 4}attributionSrc: ""autocapitalize: ""autofocus: falsebaseURI: "https://9d0d366e-7fd7-4f03-8956-410eece0c0fb-00-y9na9xqgx1e9.spock.replit.dev/"blocking: DOMTokenList [value: '']charset: ""childElementCount: 0childNodes: NodeList []children: HTMLCollection []classList: DOMTokenList [value: '']className: ""clientHeight: 0clientLeft: 0clientTop: 0clientWidth: 0contentEditable: "inherit"crossOrigin: nullcurrentCSSZoom: 1dataset: DOMStringMap {}defer: falsedir: ""draggable: falseeditContext: nullelementTiming: ""enterKeyHint: ""event: ""fetchPriority: "auto"firstChild: nullfirstElementChild: nullhidden: falsehtmlFor: ""id: "kakao-map-script"inert: falseinnerHTML: ""innerText: ""inputMode: ""integrity: ""isConnected: trueisContentEditable: falselang: ""lastChild: nulllastElementChild: nulllocalName: "script"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: nullnextSibling: nullnoModule: falsenodeName: "SCRIPT"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 0offsetLeft: 0offsetParent: nulloffsetTop: 0offsetWidth: 0onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforetoggle: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncommand: nulloncontentvisibilityautostatechange: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: (e) => {…}onfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: () => {…}onloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonscrollend: nullonscrollsnapchange: nullonscrollsnapchanging: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<script id=\"kakao-map-script\" type=\"text/javascript\" src=\"//dapi.kakao.com/v2/maps/sdk.js?appkey=ccb275c6e8b5a123a3525a50c557cca9&amp;libraries=services&amp;autoload=false\" async=\"\"></script>"outerText: ""ownerDocument: documentparentElement: headparentNode: headpart: DOMTokenList [value: '']popover: nullprefix: nullpreviousElementSibling: scriptpreviousSibling: scriptreferrerPolicy: ""role: nullscrollHeight: 0scrollLeft: 0scrollTop: 0scrollWidth: 0shadowRoot: nullslot: ""spellcheck: truesrc: "https://dapi.kakao.com/v2/maps/sdk.js?appkey=ccb275c6e8b5a123a3525a50c557cca9&libraries=services&autoload=false"style: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "SCRIPT"text: ""textContent: ""title: ""translate: truetype: "text/javascript"virtualKeyboardPolicy: ""writingSuggestions: "true"[[Prototype]]: HTMLScriptElement(...)target: script#kakao-map-scripttimeStamp: 4705.5type: "error"[[Prototype]]: Event
+Mt.forEach.n.<computed> @ Console.js:61
+script.onerror @ KakaoMapFixed.tsx:65
+script
+loadKakaoMapScript @ KakaoMapFixed.tsx:51
+(anonymous) @ KakaoMapFixed.tsx:121
+commitHookEffectListMount @ chunk-WERSD76P.js?v=dd01ffa0:16915
+commitPassiveMountOnFiber @ chunk-WERSD76P.js?v=dd01ffa0:18156
+commitPassiveMountEffects_complete @ chunk-WERSD76P.js?v=dd01ffa0:18129
+commitPassiveMountEffects_begin @ chunk-WERSD76P.js?v=dd01ffa0:18119
+commitPassiveMountEffects @ chunk-WERSD76P.js?v=dd01ffa0:18109
+flushPassiveEffectsImpl @ chunk-WERSD76P.js?v=dd01ffa0:19490
+flushPassiveEffects @ chunk-WERSD76P.js?v=dd01ffa0:19447
+(anonymous) @ chunk-WERSD76P.js?v=dd01ffa0:19328
+workLoop @ chunk-WERSD76P.js?v=dd01ffa0:197
+flushWork @ chunk-WERSD76P.js?v=dd01ffa0:176
+performWorkUntilDeadline @ chunk-WERSD76P.js?v=dd01ffa0:384
